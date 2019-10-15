@@ -7,9 +7,35 @@ logic [1:0] iorD;
 logic [31:0] w_pcIn;
 logic [31:0] w_pcOut;
 logic [31:0] w_aluOut;
-logic [31:0] w_regAOut;
+logic [31:0] w_Out;
 logic [31:0] w_excpCtrl;
 logic [31:0] w_memAddressIn;
+logic memCtrl;
+logic [31:0] w_memDataIn;
+logic [31:0] w_memDataOut;
+logic irWrite;
+logic [5:0] w_opcode;
+logic [4:0] w_rs;
+logic [4:0] w_rt;
+logic [15:0] w_rd;
+logic regWrite;
+logic [4:0] w_writeRegIn;
+logic [31:0] w_writeDataIn;
+logic [31:0] w_AIn;
+logic [31:0] w_BIn;
+logic w_regA;
+logic [31:0] w_AOut;
+logic w_regB;
+logic [31:0] w_BOut;
+logic [2:0] aluCtrl;
+logic [31:0] w_aluResult;
+logic overflow;
+logic negativo;
+logic w_z;
+logic w_eq;
+logic w_gt;
+logic w_lt;
+logic aluOutCtrl;
 
 Registrador pc(
 	.Clk(clock),
@@ -62,7 +88,7 @@ Banco_reg registers(
 Registrador regA(
 	.Clk(clock),
 	.Reset(reset),
-	.Load(regA),
+	.Load(w_regA),
 	.Entrada(w_AIn),
 	.Saida(w_AOut)
 );
@@ -70,7 +96,7 @@ Registrador regA(
 Registrador regB(
 	.Clk(clock),
 	.Reset(reset),
-	.Load(regB),
+	.Load(w_regB),
 	.Entrada(w_BIn),
 	.Saida(w_BOut)
 );
@@ -88,4 +114,12 @@ Ula32 ALU(
 	.Menor(w_lt)
 );
 
-endmodule: CPU
+Registrador aluOut(
+	.Clk(clock),
+	.Reset(reset),
+	.Load(aluOutCtrl),
+	.Entrada(w_aluResult),
+	.Saida(w_aluOut)
+);
+
+endmodule 

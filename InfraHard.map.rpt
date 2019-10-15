@@ -1,6 +1,6 @@
 Analysis & Synthesis report for InfraHard
-Mon Oct 14 18:24:21 2019
-Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+Tue Oct 15 01:49:06 2019
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
 ---------------------
@@ -10,8 +10,32 @@ Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Versio
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for Memoria:memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated
+ 13. Source assignments for Memoria:memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated
+ 14. Source assignments for Memoria:memory|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated
+ 15. Source assignments for Memoria:memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated
+ 16. Parameter Settings for User Entity Instance: Control:controle
+ 17. Parameter Settings for User Entity Instance: Memoria:memory|LPM_RAM_DQ:MEM
+ 18. Parameter Settings for User Entity Instance: Memoria:memory|LPM_RAM_DQ:MEM_plus_One
+ 19. Parameter Settings for User Entity Instance: Memoria:memory|LPM_RAM_DQ:MEM_plus_Two
+ 20. Parameter Settings for User Entity Instance: Memoria:memory|LPM_RAM_DQ:MEM_plus_Three
+ 21. Port Connectivity Checks: "MUX10:muxPCSrc"
+ 22. Port Connectivity Checks: "MUX7:muxAluSrcB"
+ 23. Port Connectivity Checks: "MUX6:muxAluSrcA"
+ 24. Port Connectivity Checks: "MUX5:muxMemToReg"
+ 25. Port Connectivity Checks: "Ula32:ALU"
+ 26. Port Connectivity Checks: "Instr_Reg:instructionRegister"
+ 27. Port Connectivity Checks: "MUX1:muxIorD"
+ 28. Port Connectivity Checks: "Control:controle"
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,21 +61,21 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Failed - Mon Oct 14 18:24:21 2019             ;
-; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
+; Analysis & Synthesis Status   ; Successful - Tue Oct 15 01:49:06 2019         ;
+; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; InfraHard                                     ;
-; Top-level Entity Name         ; InfraHard                                     ;
+; Top-level Entity Name         ; cpu                                           ;
 ; Family                        ; Stratix II                                    ;
-; Logic utilization             ; N/A until Partition Merge                     ;
-;     Combinational ALUTs       ; N/A until Partition Merge                     ;
-;     Dedicated logic registers ; N/A until Partition Merge                     ;
-; Total registers               ; N/A until Partition Merge                     ;
-; Total pins                    ; N/A until Partition Merge                     ;
-; Total virtual pins            ; N/A until Partition Merge                     ;
-; Total block memory bits       ; N/A until Partition Merge                     ;
-; DSP block 9-bit elements      ; N/A until Partition Merge                     ;
-; Total PLLs                    ; N/A until Partition Merge                     ;
-; Total DLLs                    ; N/A until Partition Merge                     ;
+; Logic utilization             ; N/A                                           ;
+;     Combinational ALUTs       ; 9                                             ;
+;     Dedicated logic registers ; 4                                             ;
+; Total registers               ; 4                                             ;
+; Total pins                    ; 9                                             ;
+; Total virtual pins            ; 0                                             ;
+; Total block memory bits       ; 0                                             ;
+; DSP block 9-bit elements      ; 0                                             ;
+; Total PLLs                    ; 0                                             ;
+; Total DLLs                    ; 0                                             ;
 +-------------------------------+-----------------------------------------------+
 
 
@@ -60,7 +84,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; InfraHard          ; InfraHard          ;
+; Top-level entity name                                                      ; cpu                ; InfraHard          ;
 ; Family name                                                                ; Stratix II         ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -152,77 +176,852 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+
+; Banco_reg.vhd                    ; yes             ; User VHDL File               ; E:/Users/pcosv/Desktop/InfraHard-master/Banco_reg.vhd                               ;
+; control.v                        ; yes             ; User Verilog HDL File        ; E:/Users/pcosv/Desktop/InfraHard-master/control.v                                   ;
+; Instr_Reg.vhd                    ; yes             ; User VHDL File               ; E:/Users/pcosv/Desktop/InfraHard-master/Instr_Reg.vhd                               ;
+; Memoria.vhd                      ; yes             ; User VHDL File               ; E:/Users/pcosv/Desktop/InfraHard-master/Memoria.vhd                                 ;
+; MUX1.v                           ; yes             ; User Verilog HDL File        ; E:/Users/pcosv/Desktop/InfraHard-master/MUX1.v                                      ;
+; MUX4.v                           ; yes             ; User Verilog HDL File        ; E:/Users/pcosv/Desktop/InfraHard-master/MUX4.v                                      ;
+; MUX5.v                           ; yes             ; User Verilog HDL File        ; E:/Users/pcosv/Desktop/InfraHard-master/MUX5.v                                      ;
+; MUX6.v                           ; yes             ; User Verilog HDL File        ; E:/Users/pcosv/Desktop/InfraHard-master/MUX6.v                                      ;
+; MUX7.v                           ; yes             ; User Verilog HDL File        ; E:/Users/pcosv/Desktop/InfraHard-master/MUX7.v                                      ;
+; MUX10.v                          ; yes             ; User Verilog HDL File        ; E:/Users/pcosv/Desktop/InfraHard-master/MUX10.v                                     ;
+; Registrador.vhd                  ; yes             ; User VHDL File               ; E:/Users/pcosv/Desktop/InfraHard-master/Registrador.vhd                             ;
+; ula32.vhd                        ; yes             ; User VHDL File               ; E:/Users/pcosv/Desktop/InfraHard-master/ula32.vhd                                   ;
+; cpu.sv                           ; yes             ; User SystemVerilog HDL File  ; E:/Users/pcosv/Desktop/InfraHard-master/cpu.sv                                      ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                 ; e:/programfiles/quartus/altera/91sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
+; altram.tdf                       ; yes             ; Megafunction                 ; e:/programfiles/quartus/altera/91sp2/quartus/libraries/megafunctions/altram.tdf     ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; e:/programfiles/quartus/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
+; db/altsyncram_6h91.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Users/pcosv/Desktop/InfraHard-master/db/altsyncram_6h91.tdf                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++-----------------------------------------------+----------------------------+
+; Resource                                      ; Usage                      ;
++-----------------------------------------------+----------------------------+
+; Estimated ALUTs Used                          ; 9                          ;
+; Dedicated logic registers                     ; 4                          ;
+;                                               ;                            ;
+; Estimated ALUTs Unavailable                   ; 0                          ;
+;                                               ;                            ;
+; Total combinational functions                 ; 9                          ;
+; Combinational ALUT usage by number of inputs  ;                            ;
+;     -- 7 input functions                      ; 0                          ;
+;     -- 6 input functions                      ; 0                          ;
+;     -- 5 input functions                      ; 0                          ;
+;     -- 4 input functions                      ; 5                          ;
+;     -- <=3 input functions                    ; 4                          ;
+;                                               ;                            ;
+; Combinational ALUTs by mode                   ;                            ;
+;     -- normal mode                            ; 9                          ;
+;     -- extended LUT mode                      ; 0                          ;
+;     -- arithmetic mode                        ; 0                          ;
+;     -- shared arithmetic mode                 ; 0                          ;
+;                                               ;                            ;
+; Estimated ALUT/register pairs used            ; 9                          ;
+;                                               ;                            ;
+; Total registers                               ; 4                          ;
+;     -- Dedicated logic registers              ; 4                          ;
+;     -- I/O registers                          ; 0                          ;
+;                                               ;                            ;
+; Estimated ALMs:  partially or completely used ; 5                          ;
+;                                               ;                            ;
+; I/O pins                                      ; 9                          ;
+; Maximum fan-out node                          ; Control:controle|Estado[3] ;
+; Maximum fan-out                               ; 9                          ;
+; Total fan-out                                 ; 47                         ;
+; Average fan-out                               ; 2.14                       ;
++-----------------------------------------------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                             ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
+; |cpu                       ; 9 (0)             ; 4 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 9    ; 0            ; |cpu                  ; work         ;
+;    |Control:controle|      ; 9 (9)             ; 4 (4)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cpu|Control:controle ;              ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++----------------------------------------------------+--------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal      ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------+------------------------+
+; Control:controle|state[0]                          ; Control:controle|WideOr5 ; yes                    ;
+; Control:controle|state[1]                          ; Control:controle|WideOr5 ; yes                    ;
+; Control:controle|state[2]                          ; Control:controle|WideOr5 ; yes                    ;
+; Control:controle|state[3]                          ; Control:controle|WideOr5 ; yes                    ;
+; Control:controle|state[4]                          ; Control:controle|WideOr5 ; yes                    ;
+; Control:controle|state[5]                          ; Control:controle|WideOr5 ; yes                    ;
+; Control:controle|state[6]                          ; Control:controle|WideOr5 ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                          ;                        ;
++----------------------------------------------------+--------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                 ;
++------------------------------------------------------+---------------------------------------------+
+; Register name                                        ; Reason for Removal                          ;
++------------------------------------------------------+---------------------------------------------+
+; Registrador:regB|Saida[0]                            ; Stuck at GND due to stuck port clock_enable ;
+; Registrador:regA|Saida[0]                            ; Stuck at GND due to stuck port clock_enable ;
+; Instr_Reg:instructionRegister|Instr25_21[0..4]       ; Lost fanout                                 ;
+; Instr_Reg:instructionRegister|Instr31_26[0..5]       ; Stuck at GND due to stuck port clock_enable ;
+; Instr_Reg:instructionRegister|Instr20_16[0..4]       ; Stuck at GND due to stuck port clock_enable ;
+; Instr_Reg:instructionRegister|Instr15_0[0..5,11..15] ; Stuck at GND due to stuck port clock_enable ;
+; Registrador:pc|Saida[1]                              ; Lost fanout                                 ;
+; Registrador:aluOut|Saida[1]                          ; Lost fanout                                 ;
+; Registrador:pc|Saida[2]                              ; Lost fanout                                 ;
+; Registrador:aluOut|Saida[2]                          ; Lost fanout                                 ;
+; Registrador:pc|Saida[3]                              ; Lost fanout                                 ;
+; Registrador:aluOut|Saida[3]                          ; Lost fanout                                 ;
+; Registrador:pc|Saida[4]                              ; Lost fanout                                 ;
+; Registrador:aluOut|Saida[4]                          ; Lost fanout                                 ;
+; Registrador:pc|Saida[5]                              ; Lost fanout                                 ;
+; Registrador:aluOut|Saida[5]                          ; Lost fanout                                 ;
+; Registrador:pc|Saida[6]                              ; Lost fanout                                 ;
+; Registrador:aluOut|Saida[6]                          ; Lost fanout                                 ;
+; Registrador:pc|Saida[7]                              ; Lost fanout                                 ;
+; Registrador:aluOut|Saida[7]                          ; Lost fanout                                 ;
+; Registrador:pc|Saida[0]                              ; Stuck at GND due to stuck port clock_enable ;
+; Registrador:aluOut|Saida[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg0[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg1[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg2[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg3[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg4[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg5[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg6[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg7[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg8[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg9[0]                          ; Lost fanout                                 ;
+; Banco_reg:registers|Reg10[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg11[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg12[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg13[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg14[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg15[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg16[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg17[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg18[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg19[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg20[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg21[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg22[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg23[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg24[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg25[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg26[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg27[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg28[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg29[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg30[0]                         ; Lost fanout                                 ;
+; Banco_reg:registers|Reg31[0]                         ; Lost fanout                                 ;
+; Control:controle|Estado[4..6]                        ; Merged with Control:controle|Estado[3]      ;
+; Total Number of Removed Registers = 80               ;                                             ;
++------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                      ;
++--------------------------------------------+--------------------------------+------------------------------------------------------------------------------------+
+; Register name                              ; Reason for Removal             ; Registers Removed due to This Register                                             ;
++--------------------------------------------+--------------------------------+------------------------------------------------------------------------------------+
+; Registrador:regB|Saida[0]                  ; Stuck at GND                   ; Registrador:pc|Saida[0], Registrador:aluOut|Saida[0], Banco_reg:registers|Reg0[0], ;
+;                                            ; due to stuck port clock_enable ; Banco_reg:registers|Reg1[0], Banco_reg:registers|Reg2[0],                          ;
+;                                            ;                                ; Banco_reg:registers|Reg3[0]                                                        ;
+; Registrador:regA|Saida[0]                  ; Stuck at GND                   ; Instr_Reg:instructionRegister|Instr25_21[4],                                       ;
+;                                            ; due to stuck port clock_enable ; Instr_Reg:instructionRegister|Instr25_21[3],                                       ;
+;                                            ;                                ; Instr_Reg:instructionRegister|Instr25_21[2],                                       ;
+;                                            ;                                ; Instr_Reg:instructionRegister|Instr25_21[1],                                       ;
+;                                            ;                                ; Instr_Reg:instructionRegister|Instr25_21[0]                                        ;
+; Instr_Reg:instructionRegister|Instr15_0[5] ; Stuck at GND                   ; Registrador:pc|Saida[1]                                                            ;
+;                                            ; due to stuck port clock_enable ;                                                                                    ;
++--------------------------------------------+--------------------------------+------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 4     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Memoria:memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                     ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                      ;
++---------------------------------+--------------------+------+--------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Memoria:memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Memoria:memory|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                              ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                               ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for Memoria:memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Control:controle ;
++----------------+---------+------------------------------------+
+; Parameter Name ; Value   ; Type                               ;
++----------------+---------+------------------------------------+
+; Resetar        ; 0000001 ; Unsigned Binary                    ;
+; Fetch          ; 0000001 ; Unsigned Binary                    ;
+; Wait           ; 0000010 ; Unsigned Binary                    ;
+; Decode         ; 0000011 ; Unsigned Binary                    ;
+; Wait2          ; 1111111 ; Unsigned Binary                    ;
+; Add            ; 0000100 ; Unsigned Binary                    ;
+; Sub            ; 0000101 ; Unsigned Binary                    ;
+; And            ; 0000110 ; Unsigned Binary                    ;
+; R_write        ; 0000111 ; Unsigned Binary                    ;
++----------------+---------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memoria:memory|LPM_RAM_DQ:MEM ;
++------------------------+------------+--------------------------------------+
+; Parameter Name         ; Value      ; Type                                 ;
++------------------------+------------+--------------------------------------+
+; LPM_WIDTH              ; 8          ; Signed Integer                       ;
+; LPM_WIDTHAD            ; 8          ; Signed Integer                       ;
+; LPM_NUMWORDS           ; 0          ; Signed Integer                       ;
+; LPM_INDATA             ; REGISTERED ; Untyped                              ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                              ;
+; LPM_OUTDATA            ; REGISTERED ; Untyped                              ;
+; LPM_FILE               ; teste.mif  ; Untyped                              ;
+; USE_EAB                ; ON         ; Untyped                              ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                              ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                       ;
++------------------------+------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memoria:memory|LPM_RAM_DQ:MEM_plus_One ;
++------------------------+------------+-----------------------------------------------+
+; Parameter Name         ; Value      ; Type                                          ;
++------------------------+------------+-----------------------------------------------+
+; LPM_WIDTH              ; 8          ; Signed Integer                                ;
+; LPM_WIDTHAD            ; 8          ; Signed Integer                                ;
+; LPM_NUMWORDS           ; 0          ; Signed Integer                                ;
+; LPM_INDATA             ; REGISTERED ; Untyped                                       ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                       ;
+; LPM_OUTDATA            ; REGISTERED ; Untyped                                       ;
+; LPM_FILE               ; teste.mif  ; Untyped                                       ;
+; USE_EAB                ; ON         ; Untyped                                       ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                       ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                ;
++------------------------+------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memoria:memory|LPM_RAM_DQ:MEM_plus_Two ;
++------------------------+------------+-----------------------------------------------+
+; Parameter Name         ; Value      ; Type                                          ;
++------------------------+------------+-----------------------------------------------+
+; LPM_WIDTH              ; 8          ; Signed Integer                                ;
+; LPM_WIDTHAD            ; 8          ; Signed Integer                                ;
+; LPM_NUMWORDS           ; 0          ; Signed Integer                                ;
+; LPM_INDATA             ; REGISTERED ; Untyped                                       ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                       ;
+; LPM_OUTDATA            ; REGISTERED ; Untyped                                       ;
+; LPM_FILE               ; teste.mif  ; Untyped                                       ;
+; USE_EAB                ; ON         ; Untyped                                       ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                       ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                ;
++------------------------+------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memoria:memory|LPM_RAM_DQ:MEM_plus_Three ;
++------------------------+------------+-------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                            ;
++------------------------+------------+-------------------------------------------------+
+; LPM_WIDTH              ; 8          ; Signed Integer                                  ;
+; LPM_WIDTHAD            ; 8          ; Signed Integer                                  ;
+; LPM_NUMWORDS           ; 0          ; Signed Integer                                  ;
+; LPM_INDATA             ; REGISTERED ; Untyped                                         ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                         ;
+; LPM_OUTDATA            ; REGISTERED ; Untyped                                         ;
+; LPM_FILE               ; teste.mif  ; Untyped                                         ;
+; USE_EAB                ; ON         ; Untyped                                         ;
+; DEVICE_FAMILY          ; Stratix II ; Untyped                                         ;
+; CBXI_PARAMETER         ; NOTHING    ; Untyped                                         ;
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                  ;
++------------------------+------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX10:muxPCSrc"                                                                                                                                       ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                            ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; w_muxIn2 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "w_muxIn2[31..1]" will be connected to GND. ;
+; w_muxIn3 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "w_muxIn3[31..1]" will be connected to GND. ;
+; w_muxIn4 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "w_muxIn4[31..1]" will be connected to GND. ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX7:muxAluSrcB"                                                                                                                  ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; w_muxOut ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "w_muxOut[31..1]" have no fanouts ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX6:muxAluSrcA"                                                                                                                  ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; w_muxOut ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "w_muxOut[31..1]" have no fanouts ;
++----------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX5:muxMemToReg"                                                                                                                                     ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                            ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; w_muxIn3 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "w_muxIn3[31..1]" will be connected to GND. ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Ula32:ALU"                                                                                      ;
++----------+--------+------------------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity         ; Details                                                                             ;
++----------+--------+------------------+-------------------------------------------------------------------------------------+
+; a        ; Input  ; Critical Warning ; Types are incompatible                                                              ;
+; b        ; Input  ; Critical Warning ; Types are incompatible                                                              ;
+; overflow ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; negativo ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; z        ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+------------------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Instr_Reg:instructionRegister"                                                                  ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; instr15_0[10..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX1:muxIorD"                                                                                                                                         ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                            ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; w_muxIn2 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "w_muxIn2[31..1]" will be connected to GND. ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Control:controle"                                                                                                 ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                  ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; flagEPC       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagSSCtrl    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagLSCtrl    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagMDR       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagDivStart  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagMultStart ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagDivMult   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagRegHighW  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagRegLowW   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagMultS     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagShiftSrc  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagShiftAmt  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagShiftCtrl ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; flagExcpCtrl  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; Reset         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Mon Oct 14 18:24:19 2019
+    Info: Processing started: Tue Oct 15 01:49:04 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off InfraHard -c InfraHard
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux1.v
-    Info: Found entity 1: MUX1
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux2.v
-    Info: Found entity 1: MUX2
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux3.v
-    Info: Found entity 1: MUX3
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux4.v
-    Info: Found entity 1: MUX4
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux5.v
-    Info: Found entity 1: MUX5
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux6.v
-    Info: Found entity 1: MUX6
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux7.v
-    Info: Found entity 1: MUX7
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux8.v
-    Info: Found entity 1: MUX8
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux9.v
-    Info: Found entity 1: MUX9
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux10.v
-    Info: Found entity 1: MUX10
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux11.v
-    Info: Found entity 1: MUX11
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/muxes/mux12.v
-    Info: Found entity 1: MUX12
-Info: Found 2 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/banco_reg.vhd
+Info: Found 2 design units, including 1 entities, in source file banco_reg.vhd
     Info: Found design unit 1: Banco_reg-behavioral_arch
     Info: Found entity 1: Banco_reg
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/control.v
+Info: Found 1 design units, including 1 entities, in source file control.v
     Info: Found entity 1: Control
-Info: Found 1 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/cpublock.test.v
-    Info: Found entity 1: cpublock
-Info: Found 2 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/instr_reg.vhd
+Info: Found 2 design units, including 1 entities, in source file instr_reg.vhd
     Info: Found design unit 1: Instr_Reg-behavioral_arch
     Info: Found entity 1: Instr_Reg
-Info: Found 3 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/memoria.vhd
+Info: Found 3 design units, including 1 entities, in source file memoria.vhd
     Info: Found design unit 1: ram_constants
     Info: Found design unit 2: Memoria-behavioral_arch
     Info: Found entity 1: Memoria
-Info: Found 2 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/regdesloc.vhd
+Info: Found 1 design units, including 1 entities, in source file mux1.v
+    Info: Found entity 1: MUX1
+Info: Found 1 design units, including 1 entities, in source file mux2.v
+    Info: Found entity 1: MUX2
+Info: Found 1 design units, including 1 entities, in source file mux3.v
+    Info: Found entity 1: MUX3
+Info: Found 1 design units, including 1 entities, in source file mux4.v
+    Info: Found entity 1: MUX4
+Info: Found 1 design units, including 1 entities, in source file mux5.v
+    Info: Found entity 1: MUX5
+Info: Found 1 design units, including 1 entities, in source file mux6.v
+    Info: Found entity 1: MUX6
+Info: Found 1 design units, including 1 entities, in source file mux7.v
+    Info: Found entity 1: MUX7
+Info: Found 1 design units, including 1 entities, in source file mux8.v
+    Info: Found entity 1: MUX8
+Info: Found 1 design units, including 1 entities, in source file mux9.v
+    Info: Found entity 1: MUX9
+Info: Found 1 design units, including 1 entities, in source file mux10.v
+    Info: Found entity 1: MUX10
+Info: Found 1 design units, including 1 entities, in source file mux11.v
+    Info: Found entity 1: MUX11
+Info: Found 1 design units, including 1 entities, in source file mux12.v
+    Info: Found entity 1: MUX12
+Info: Found 2 design units, including 1 entities, in source file regdesloc.vhd
     Info: Found design unit 1: RegDesloc-behavioral_arch
     Info: Found entity 1: RegDesloc
-Info: Found 2 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/registrador.vhd
+Info: Found 2 design units, including 1 entities, in source file registrador.vhd
     Info: Found design unit 1: Registrador-behavioral_arch
     Info: Found entity 1: Registrador
-Info: Found 2 design units, including 1 entities, in source file /users/gbcs/desktop/inframorte/inframorte/src/ula32.vhd
+Info: Found 2 design units, including 1 entities, in source file ula32.vhd
     Info: Found design unit 1: Ula32-behavioral
     Info: Found entity 1: Ula32
-Warning (10275): Verilog HDL Module Instantiation warning at cpu.v(414): ignored dangling comma in List of Port Connections
-Error (10839): Verilog HDL error at cpu.v(464): using a closing label on a design unit is a SystemVerilog feature File: C:/Users/gbcs/Desktop/AgoraVai/cpu.v Line: 464
-Error (10112): Ignored design unit "CPU" at cpu.v(1) due to previous errors File: C:/Users/gbcs/Desktop/AgoraVai/cpu.v Line: 1
-Info: Found 0 design units, including 0 entities, in source file cpu.v
-Info: Generated suppressed messages file C:/Users/gbcs/Desktop/AgoraVai/InfraHard.map.smsg
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4455 megabytes
-    Error: Processing ended: Mon Oct 14 18:24:21 2019
-    Error: Elapsed time: 00:00:02
-    Error: Total CPU time (on all processors): 00:00:02
+Info: Found 1 design units, including 1 entities, in source file cpu.sv
+    Info: Found entity 1: cpu
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(90): created implicit net for "w_regAOut"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(143): created implicit net for "w_ulaAIn"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(144): created implicit net for "w_ulaBIn"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(176): created implicit net for "w_signExtend132eOut"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(203): created implicit net for "w_shiftleft2pc"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(204): created implicit net for "w_signExtend132dOut"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(205): created implicit net for "w_epcOut"
+Info: Elaborating entity "cpu" for the top level hierarchy
+Info: Elaborating entity "Control" for hierarchy "Control:controle"
+Warning (10230): Verilog HDL assignment warning at control.v(46): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(53): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(173): truncated value with size 32 to match size of target (3)
+Warning (10270): Verilog HDL Case Statement warning at control.v(207): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at control.v(202): incomplete case statement has no default case item
+Warning (10230): Verilog HDL assignment warning at control.v(258): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(292): truncated value with size 32 to match size of target (3)
+Warning (10272): Verilog HDL Case Statement warning at control.v(66): case item expression covers a value already covered by a previous case item
+Warning (10270): Verilog HDL Case Statement warning at control.v(30): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagALUOut", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagALUCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagALUSrcA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagALUSrcB", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagDivMult", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagDivStart", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagEPC", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagExcpCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagIorD", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagIrWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagLSCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagMDR", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagMemCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagMemReg", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagMultS", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagMultStart", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagPCSrc", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagPcWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagRegA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagRegB", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagRegDist", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagRegHighW", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagRegLowW", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagRegWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagShiftAmt", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagShiftCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagShiftSrc", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "flagSSCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "Reset", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(30): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "state[0]" at control.v(30)
+Info (10041): Inferred latch for "state[1]" at control.v(30)
+Info (10041): Inferred latch for "state[2]" at control.v(30)
+Info (10041): Inferred latch for "state[3]" at control.v(30)
+Info (10041): Inferred latch for "state[4]" at control.v(30)
+Info (10041): Inferred latch for "state[5]" at control.v(30)
+Info (10041): Inferred latch for "state[6]" at control.v(30)
+Info (10041): Inferred latch for "Reset" at control.v(30)
+Info (10041): Inferred latch for "flagSSCtrl[0]" at control.v(30)
+Info (10041): Inferred latch for "flagSSCtrl[1]" at control.v(30)
+Info (10041): Inferred latch for "flagShiftSrc[0]" at control.v(30)
+Info (10041): Inferred latch for "flagShiftSrc[1]" at control.v(30)
+Info (10041): Inferred latch for "flagShiftCtrl[0]" at control.v(30)
+Info (10041): Inferred latch for "flagShiftCtrl[1]" at control.v(30)
+Info (10041): Inferred latch for "flagShiftCtrl[2]" at control.v(30)
+Info (10041): Inferred latch for "flagShiftAmt[0]" at control.v(30)
+Info (10041): Inferred latch for "flagShiftAmt[1]" at control.v(30)
+Info (10041): Inferred latch for "flagRegWrite" at control.v(30)
+Info (10041): Inferred latch for "flagRegLowW" at control.v(30)
+Info (10041): Inferred latch for "flagRegHighW" at control.v(30)
+Info (10041): Inferred latch for "flagRegDist[0]" at control.v(30)
+Info (10041): Inferred latch for "flagRegDist[1]" at control.v(30)
+Info (10041): Inferred latch for "flagRegDist[2]" at control.v(30)
+Info (10041): Inferred latch for "flagRegB" at control.v(30)
+Info (10041): Inferred latch for "flagRegA" at control.v(30)
+Info (10041): Inferred latch for "flagPcWrite" at control.v(30)
+Info (10041): Inferred latch for "flagPCSrc[0]" at control.v(30)
+Info (10041): Inferred latch for "flagPCSrc[1]" at control.v(30)
+Info (10041): Inferred latch for "flagPCSrc[2]" at control.v(30)
+Info (10041): Inferred latch for "flagMultStart" at control.v(30)
+Info (10041): Inferred latch for "flagMultS" at control.v(30)
+Info (10041): Inferred latch for "flagMemReg[0]" at control.v(30)
+Info (10041): Inferred latch for "flagMemReg[1]" at control.v(30)
+Info (10041): Inferred latch for "flagMemReg[2]" at control.v(30)
+Info (10041): Inferred latch for "flagMemCtrl" at control.v(30)
+Info (10041): Inferred latch for "flagMDR" at control.v(30)
+Info (10041): Inferred latch for "flagLSCtrl[0]" at control.v(30)
+Info (10041): Inferred latch for "flagLSCtrl[1]" at control.v(30)
+Info (10041): Inferred latch for "flagIrWrite" at control.v(30)
+Info (10041): Inferred latch for "flagIorD[0]" at control.v(30)
+Info (10041): Inferred latch for "flagIorD[1]" at control.v(30)
+Info (10041): Inferred latch for "flagExcpCtrl[0]" at control.v(30)
+Info (10041): Inferred latch for "flagExcpCtrl[1]" at control.v(30)
+Info (10041): Inferred latch for "flagEPC" at control.v(30)
+Info (10041): Inferred latch for "flagDivStart" at control.v(30)
+Info (10041): Inferred latch for "flagDivMult" at control.v(30)
+Info (10041): Inferred latch for "flagALUSrcB[0]" at control.v(30)
+Info (10041): Inferred latch for "flagALUSrcB[1]" at control.v(30)
+Info (10041): Inferred latch for "flagALUSrcB[2]" at control.v(30)
+Info (10041): Inferred latch for "flagALUSrcA[0]" at control.v(30)
+Info (10041): Inferred latch for "flagALUSrcA[1]" at control.v(30)
+Info (10041): Inferred latch for "flagALUCtrl[0]" at control.v(30)
+Info (10041): Inferred latch for "flagALUCtrl[1]" at control.v(30)
+Info (10041): Inferred latch for "flagALUCtrl[2]" at control.v(30)
+Info (10041): Inferred latch for "flagALUOut" at control.v(30)
+Info: Elaborating entity "Registrador" for hierarchy "Registrador:pc"
+Info: Elaborating entity "MUX1" for hierarchy "MUX1:muxIorD"
+Info: Elaborating entity "Memoria" for hierarchy "Memoria:memory"
+Info: Elaborating entity "LPM_RAM_DQ" for hierarchy "Memoria:memory|LPM_RAM_DQ:MEM"
+Info: Elaborated megafunction instantiation "Memoria:memory|LPM_RAM_DQ:MEM"
+Info: Instantiated megafunction "Memoria:memory|LPM_RAM_DQ:MEM" with the following parameter:
+    Info: Parameter "LPM_WIDTH" = "8"
+    Info: Parameter "LPM_WIDTHAD" = "8"
+    Info: Parameter "LPM_NUMWORDS" = "0"
+    Info: Parameter "LPM_INDATA" = "REGISTERED"
+    Info: Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info: Parameter "LPM_OUTDATA" = "REGISTERED"
+    Info: Parameter "LPM_FILE" = "teste.mif"
+    Info: Parameter "LPM_TYPE" = "LPM_RAM_DQ"
+    Info: Parameter "USE_EAB" = "ON"
+    Info: Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
+    Info: Parameter "LPM_HINT" = "UNUSED"
+Info: Elaborating entity "altram" for hierarchy "Memoria:memory|LPM_RAM_DQ:MEM|altram:sram"
+Warning: Assertion warning: altram does not support Stratix II device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Stratix II devices
+Info: Elaborated megafunction instantiation "Memoria:memory|LPM_RAM_DQ:MEM|altram:sram", which is child of megafunction instantiation "Memoria:memory|LPM_RAM_DQ:MEM"
+Info: Elaborating entity "altsyncram" for hierarchy "Memoria:memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block"
+Info: Elaborated megafunction instantiation "Memoria:memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "Memoria:memory|LPM_RAM_DQ:MEM"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_6h91.tdf
+    Info: Found entity 1: altsyncram_6h91
+Info: Elaborating entity "altsyncram_6h91" for hierarchy "Memoria:memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated"
+Info: Elaborating entity "Instr_Reg" for hierarchy "Instr_Reg:instructionRegister"
+Info: Elaborating entity "Banco_reg" for hierarchy "Banco_reg:registers"
+Info: Elaborating entity "Ula32" for hierarchy "Ula32:ALU"
+Info: Elaborating entity "MUX4" for hierarchy "MUX4:muxRegDist"
+Warning (10270): Verilog HDL Case Statement warning at MUX4.v(10): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at MUX4.v(10): inferring latch(es) for variable "w_muxOut", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "w_muxOut[0]" at MUX4.v(10)
+Info (10041): Inferred latch for "w_muxOut[1]" at MUX4.v(10)
+Info (10041): Inferred latch for "w_muxOut[2]" at MUX4.v(10)
+Info (10041): Inferred latch for "w_muxOut[3]" at MUX4.v(10)
+Info (10041): Inferred latch for "w_muxOut[4]" at MUX4.v(10)
+Info: Elaborating entity "MUX5" for hierarchy "MUX5:muxMemToReg"
+Info: Elaborating entity "MUX6" for hierarchy "MUX6:muxAluSrcA"
+Warning (10270): Verilog HDL Case Statement warning at MUX6.v(10): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at MUX6.v(10): inferring latch(es) for variable "w_muxOut", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "w_muxOut[0]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[1]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[2]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[3]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[4]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[5]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[6]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[7]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[8]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[9]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[10]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[11]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[12]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[13]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[14]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[15]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[16]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[17]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[18]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[19]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[20]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[21]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[22]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[23]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[24]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[25]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[26]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[27]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[28]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[29]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[30]" at MUX6.v(10)
+Info (10041): Inferred latch for "w_muxOut[31]" at MUX6.v(10)
+Info: Elaborating entity "MUX7" for hierarchy "MUX7:muxAluSrcB"
+Warning (10270): Verilog HDL Case Statement warning at MUX7.v(10): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at MUX7.v(10): inferring latch(es) for variable "w_muxOut", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "w_muxOut[0]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[1]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[2]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[3]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[4]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[5]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[6]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[7]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[8]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[9]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[10]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[11]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[12]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[13]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[14]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[15]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[16]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[17]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[18]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[19]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[20]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[21]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[22]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[23]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[24]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[25]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[26]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[27]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[28]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[29]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[30]" at MUX7.v(10)
+Info (10041): Inferred latch for "w_muxOut[31]" at MUX7.v(10)
+Info: Elaborating entity "MUX10" for hierarchy "MUX10:muxPCSrc"
+Warning (10270): Verilog HDL Case Statement warning at MUX10.v(10): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at MUX10.v(10): inferring latch(es) for variable "w_muxOut", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "w_muxOut[0]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[1]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[2]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[3]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[4]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[5]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[6]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[7]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[8]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[9]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[10]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[11]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[12]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[13]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[14]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[15]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[16]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[17]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[18]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[19]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[20]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[21]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[22]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[23]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[24]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[25]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[26]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[27]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[28]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[29]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[30]" at MUX10.v(10)
+Info (10041): Inferred latch for "w_muxOut[31]" at MUX10.v(10)
+Warning: Synthesized away the following node(s):
+    Warning: Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_6h91:auto_generated|q_a[5]"
+Warning: 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "Control:controle|state[5]" merged with LATCH primitive "Control:controle|state[3]"
+    Info: Duplicate LATCH primitive "Control:controle|state[6]" merged with LATCH primitive "Control:controle|state[3]"
+    Info: Duplicate LATCH primitive "Control:controle|state[4]" merged with LATCH primitive "Control:controle|state[3]"
+Warning: Latch Control:controle|state[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Control:controle|Estado[0]
+Warning: Latch Control:controle|state[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Control:controle|Estado[5]
+Warning: Latch Control:controle|state[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Control:controle|Estado[0]
+Warning: Latch Control:controle|state[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Control:controle|Estado[0]
+Info: 52 registers lost all their fanouts during netlist optimizations. The first 52 are displayed below.
+    Info: Register "Instr_Reg:instructionRegister|Instr25_21[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Instr_Reg:instructionRegister|Instr25_21[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Instr_Reg:instructionRegister|Instr25_21[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Instr_Reg:instructionRegister|Instr25_21[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Instr_Reg:instructionRegister|Instr25_21[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:pc|Saida[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:aluOut|Saida[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:pc|Saida[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:aluOut|Saida[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:pc|Saida[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:aluOut|Saida[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:pc|Saida[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:aluOut|Saida[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:pc|Saida[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:aluOut|Saida[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:pc|Saida[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:aluOut|Saida[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:pc|Saida[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:aluOut|Saida[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "Registrador:aluOut|Saida[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg0[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg1[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg2[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg3[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg4[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg5[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg6[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg7[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg8[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg9[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg10[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg11[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg12[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg13[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg14[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg15[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg16[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg17[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg18[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg19[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg20[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg21[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg22[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg23[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg24[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg25[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg26[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg27[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg28[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg29[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg30[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "Banco_reg:registers|Reg31[0]" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file E:/Users/pcosv/Desktop/InfraHard-master/InfraHard.map.smsg
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset"
+Info: Implemented 22 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 7 output pins
+    Info: Implemented 13 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 267 megabytes
+    Info: Processing ended: Tue Oct 15 01:49:06 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/gbcs/Desktop/AgoraVai/InfraHard.map.smsg.
+The suppressed messages can be found in E:/Users/pcosv/Desktop/InfraHard-master/InfraHard.map.smsg.
 
 

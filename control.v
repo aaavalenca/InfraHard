@@ -13,7 +13,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 	//Estados
 
 	//~~~Estados Inicias~~~
-	parameter Resetar = 7'b0000000, Fetch = 7'b0000001, Wait = 7'b0000010, Decode = 7'b0000011, Wait2 = 7'b1111111;
+	parameter Resetar = 7'b0000001, Fetch = 7'b0000001, Wait = 7'b0000010, Decode = 7'b0000011, Wait2 = 7'b1111111;
 
 	//~~~Estados das Funcoes~~~
 	parameter Add = 7'b0000100, Sub = 7'b0000101, And = 7'b0000110, R_write = 7'b0000111;
@@ -22,7 +22,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 	
 	//Maquina de Estados
 	always @ (posedge Clock) begin
-		Estado = state;
+		Estado <= state;
 	end
 	
 	always @(*) begin
