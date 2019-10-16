@@ -209,14 +209,16 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 
 						case (Funct)
 							
-							//6'b100000: Estado <= Add; //Funct: 0x20 -> Add
-							6'b100000: state <= Add;
+							6'b100000: state <= Add; //Funct: 0x20 -> Add
+							6'b100010: state <= Sub; //Funct: 0x22 -> Sub
+							6'b100100: state <= And; //Funct: 0x24 -> And
 
 						endcase
 
 					end
 
-					6'b001001: state <= addi;
+					6'b001000: state <= addi;
+					6'b001001: state <= addiu;
 
 				endcase
 				
@@ -254,7 +256,6 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				//Estado <= R_write;				
 				state <= R_write;
 			end
 
@@ -288,7 +289,6 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				//Estado <= R_write;
 				state <= R_write;
 			end
 
@@ -322,7 +322,6 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				//Estado <= R_write;
 				state <= R_write;
 			end
 
@@ -356,7 +355,6 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				//Estado <= Fetch;
 				state <= Fetch;
 			end
 
@@ -426,7 +424,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= Fetch;
+				Estado <= R_write_addi;
 			end
 
 			R_write_addi: begin
