@@ -206,4 +206,9 @@ MUX10 muxPCSrc(
 	.w_muxOut(w_pcIn)
 );
 
+SignExtend signExtend(
+	.instruction15_0(w_rd),
+	.instruction31_0(w_signExtend1632Out)
+);
+
 endmodule: cpu
