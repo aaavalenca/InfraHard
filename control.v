@@ -8,12 +8,12 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 	output reg[1:0] flagIorD, flagALUSrcA, flagSSCtrl, flagLSCtrl, flagShiftSrc, flagShiftAmt, flagExcpCtrl;
 	output reg[2:0] flagRegDist, flagALUSrcB, flagALUCtrl, flagMemReg, flagShiftCtrl, flagPCSrc;
 	
-	initial Estado <= 7'b0000000;
+	initial Estado <= 7'b0000001;
 
 	//Estados
 
 	//~~~Estados Inicias~~~
-	parameter Resetar = 7'b0000001, Fetch = 7'b0000001, Wait = 7'b0000010, Decode = 7'b0000011, Wait2 = 7'b1111111;
+	parameter Resetar = 7'b0000000, Fetch = 7'b0000001, Wait = 7'b0000010, Decode = 7'b0000011, Wait2 = 7'b1111111;
 
 	//~~~Estados das Funcoes~~~
 	parameter Add = 7'b0000100, Sub = 7'b0000101, And = 7'b0000110, R_write = 7'b0000111;
@@ -206,8 +206,9 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 
 						case (Funct)
 							
-							//6'b100000: Estado <= Add; //Funct: 0x20 -> Add
-							6'b100000: state <= Add;
+							6'b100000: state <= Add; //Funct: 0x20 -> Add
+							6'b100010: state <= Sub; //Funct: 0x22 -> Sub
+							6'b100100: state <= And; //Funct: 0x24 -> And
 
 						endcase
 

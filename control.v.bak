@@ -8,7 +8,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 	output reg[1:0] flagIorD, flagALUSrcA, flagSSCtrl, flagLSCtrl, flagShiftSrc, flagShiftAmt, flagExcpCtrl;
 	output reg[2:0] flagRegDist, flagALUSrcB, flagALUCtrl, flagMemReg, flagShiftCtrl, flagPCSrc;
 	
-	initial Estado <= 7'b0000000;
+	initial Estado <= 7'b0000001;
 
 	//Estados
 
@@ -208,6 +208,8 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 							
 							//6'b100000: Estado <= Add; //Funct: 0x20 -> Add
 							6'b100000: state <= Add;
+							6'b100010: state <= Sub;
+							6'b100100: state <= And;
 
 						endcase
 

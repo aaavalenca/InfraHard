@@ -1,5 +1,5 @@
 Assembler report for InfraHard
-Tue Oct 15 01:49:14 2019
+Wed Oct 16 15:32:40 2019
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -10,8 +10,8 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/Users/pcosv/Desktop/InfraHard-master/InfraHard.sof
-  6. Assembler Device Options: E:/Users/pcosv/Desktop/InfraHard-master/InfraHard.pof
+  5. Assembler Device Options: C:/Users/lrsv/Documents/InfraHard/InfraHard.sof
+  6. Assembler Device Options: C:/Users/lrsv/Documents/InfraHard/InfraHard.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Oct 15 01:49:14 2019 ;
+; Assembler Status      ; Successful - Wed Oct 16 15:32:40 2019 ;
 ; Revision Name         ; InfraHard                             ;
 ; Top-level Entity Name ; cpu                                   ;
 ; Family                ; Stratix II                            ;
@@ -79,37 +79,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-------------------------------------------------------+
-; Assembler Generated Files                             ;
-+-------------------------------------------------------+
-; File Name                                             ;
-+-------------------------------------------------------+
-; E:/Users/pcosv/Desktop/InfraHard-master/InfraHard.sof ;
-; E:/Users/pcosv/Desktop/InfraHard-master/InfraHard.pof ;
-+-------------------------------------------------------+
++-------------------------------------------------+
+; Assembler Generated Files                       ;
++-------------------------------------------------+
+; File Name                                       ;
++-------------------------------------------------+
+; C:/Users/lrsv/Documents/InfraHard/InfraHard.sof ;
+; C:/Users/lrsv/Documents/InfraHard/InfraHard.pof ;
++-------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Assembler Device Options: E:/Users/pcosv/Desktop/InfraHard-master/InfraHard.sof ;
-+----------------+----------------------------------------------------------------+
-; Option         ; Setting                                                        ;
-+----------------+----------------------------------------------------------------+
-; Device         ; EP2S15F484C3                                                   ;
-; JTAG usercode  ; 0xFFFFFFFF                                                     ;
-; Checksum       ; 0x00277583                                                     ;
-+----------------+----------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/lrsv/Documents/InfraHard/InfraHard.sof ;
++----------------+----------------------------------------------------------+
+; Option         ; Setting                                                  ;
++----------------+----------------------------------------------------------+
+; Device         ; EP2S15F484C3                                             ;
+; JTAG usercode  ; 0xFFFFFFFF                                               ;
+; Checksum       ; 0x00277015                                               ;
++----------------+----------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Assembler Device Options: E:/Users/pcosv/Desktop/InfraHard-master/InfraHard.pof ;
-+--------------------+------------------------------------------------------------+
-; Option             ; Setting                                                    ;
-+--------------------+------------------------------------------------------------+
-; Device             ; EPC16                                                      ;
-; JTAG usercode      ; 0xFFFFFFFF                                                 ;
-; Checksum           ; 0x1EF5C329                                                 ;
-; Compression Ratio  ; 3                                                          ;
-+--------------------+------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/lrsv/Documents/InfraHard/InfraHard.pof ;
++--------------------+------------------------------------------------------+
+; Option             ; Setting                                              ;
++--------------------+------------------------------------------------------+
+; Device             ; EPC16                                                ;
+; JTAG usercode      ; 0xFFFFFFFF                                           ;
+; Checksum           ; 0x1EF5DBE7                                           ;
+; Compression Ratio  ; 3                                                    ;
++--------------------+------------------------------------------------------+
 
 
 +--------------------+
@@ -118,14 +118,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Tue Oct 15 01:49:13 2019
+    Info: Processing started: Wed Oct 16 15:32:38 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off InfraHard -c InfraHard
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 245 megabytes
-    Info: Processing ended: Tue Oct 15 01:49:15 2019
+    Info: Processing ended: Wed Oct 16 15:32:40 2019
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
