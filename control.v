@@ -217,8 +217,8 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 
 					end
 
-					6'b001000: state <= addi;
-					6'b001001: state <= addiu;
+					6'b001000: state <= Addi;
+					6'b001001: state <= Addiu;
 
 				endcase
 				
@@ -390,7 +390,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= R_write_addi;
+				state <= R_write_addi;
 				//Tratamento de Exceção
 			end
 
@@ -424,7 +424,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= R_write_addi;
+				state <= R_write_addi;
 			end
 
 			R_write_addi: begin
@@ -457,7 +457,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= Fetch;
+				state <= Fetch;
 			end
 
 		endcase

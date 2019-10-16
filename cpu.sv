@@ -1,9 +1,11 @@
 module cpu(input clock,
 	input reset,
-	output [6:0] state
+	output [6:0] state,
+	output [5:0] w_opcode,
+	output [15:0] w_rd
 );
 
-logic [15:0] w_rd;
+//logic [15:0] w_rd;
 logic [1:0] aluSrcA;
 logic [1:0] iorD;
 logic [2:0] aluCtrl;
@@ -36,7 +38,7 @@ logic [31:0] w_writeDataIn;
 logic [4:0] w_rs;
 logic [4:0] w_rt;
 logic [4:0] w_writeRegIn;
-logic [5:0] w_opcode;
+//logic [5:0] w_opcode;
 logic aluOutCtrl;
 logic irWrite;
 logic memCtrl;
