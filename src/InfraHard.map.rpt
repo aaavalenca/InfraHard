@@ -1,5 +1,5 @@
 Analysis & Synthesis report for InfraHard
-Fri Oct 18 13:51:46 2019
+Fri Oct 18 14:56:14 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +-------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Fri Oct 18 13:51:46 2019         ;
+; Analysis & Synthesis Status   ; Successful - Fri Oct 18 14:56:14 2019         ;
 ; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
 ; Revision Name                 ; InfraHard                                     ;
 ; Top-level Entity Name         ; cpu                                           ;
@@ -543,14 +543,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ShiftLeft26_28:sL2628"                                                                                                                                                                       ;
-+---------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                      ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+---------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; instructionOut27_0        ; Output ; Warning  ; Output or bidir port (28 bits) is smaller than the port expression (32 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND. ;
-; instructionOut27_0[27..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
-+---------------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ShiftLeft26_28:sL2628"                                                                                                                                                                ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                                                                                                                 ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; instructionOut27_0 ; Output ; Warning  ; Output or bidir port (28 bits) is smaller than the port expression (32 bits) it drives.  The 4 most-significant bit(s) in the port expression will be connected to GND. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -568,7 +567,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port     ; Type  ; Severity ; Details                                                                                                                                            ;
 +----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; w_muxIn2 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "w_muxIn2[31..1]" will be connected to GND. ;
 ; w_muxIn3 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "w_muxIn3[31..1]" will be connected to GND. ;
 ; w_muxIn4 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "w_muxIn4[31..1]" will be connected to GND. ;
 +----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -650,7 +648,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Fri Oct 18 13:51:44 2019
+    Info: Processing started: Fri Oct 18 14:56:12 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off InfraHard -c InfraHard
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file signextend16_32.v
@@ -713,7 +711,6 @@ Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(115): created implic
 Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(168): created implicit net for "w_ulaAIn"
 Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(169): created implicit net for "w_ulaBIn"
 Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(201): created implicit net for "w_signExtend132eOut"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(242): created implicit net for "w_shiftleft2pc"
 Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(243): created implicit net for "w_signExtend132dOut"
 Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(244): created implicit net for "w_epcOut"
 Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(279): created implicit net for "w_ShiftLeft2OUt"
@@ -1103,9 +1100,9 @@ Info: Implemented 50 device resources after synthesis - the final resource count
     Info: Implemented 2 input pins
     Info: Implemented 29 output pins
     Info: Implemented 19 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 136 warnings
-    Info: Peak virtual memory: 4493 megabytes
-    Info: Processing ended: Fri Oct 18 13:51:46 2019
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 135 warnings
+    Info: Peak virtual memory: 4492 megabytes
+    Info: Processing ended: Fri Oct 18 14:56:14 2019
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

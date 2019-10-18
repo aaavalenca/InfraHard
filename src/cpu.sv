@@ -44,6 +44,7 @@ logic [31:0] w_highIn;
 logic [31:0] w_lowIn;
 logic [31:0] w_highOut;
 logic [31:0] w_lowOut;
+logic [31:0] w_signExtend132dOut;
 logic [25:0] w_inst25_0rs;
 logic [4:0] w_inst15_11rd;
 logic [4:0] w_rs;
@@ -239,8 +240,8 @@ MUX10 muxPCSrc(
 	.flagPCSrc(pcSrc),
 	.w_muxIn0(w_aluResult),
 	.w_muxIn1(w_aluOut),
-	.w_muxIn2(w_shiftleft2pc),
-	.w_muxIn3(w_signExtend132dOut),
+	.w_muxIn2({w_pcOut[31:28], w_shiftLeft2628Out[27:0]}), //para concatenar, basta passar assim
+	.w_muxIn3(w_signExtend132dOut), // falta o sign extend 1 32
 	.w_muxIn4(w_epcOut),
 	.w_muxOut(w_pcIn)
 );

@@ -1,5 +1,5 @@
 Assembler report for InfraHard
-Fri Oct 18 13:51:54 2019
+Fri Oct 18 14:56:20 2019
 Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Oct 18 13:51:54 2019 ;
+; Assembler Status      ; Successful - Fri Oct 18 14:56:20 2019 ;
 ; Revision Name         ; InfraHard                             ;
 ; Top-level Entity Name ; cpu                                   ;
 ; Family                ; Stratix II                            ;
@@ -118,14 +118,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
-    Info: Processing started: Fri Oct 18 13:51:52 2019
+    Info: Processing started: Fri Oct 18 14:56:19 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off InfraHard -c InfraHard
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4419 megabytes
-    Info: Processing ended: Fri Oct 18 13:51:54 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Fri Oct 18 14:56:20 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
