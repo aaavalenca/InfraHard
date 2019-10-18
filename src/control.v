@@ -65,7 +65,6 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 1;
-				//Estado <= Fetch;
 				state <= Fetch;
 			end
 
@@ -99,7 +98,6 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				//Estado <= Wait;
 				state <= Wait;
 			end
 			
@@ -133,7 +131,6 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				//Estado <= Decode;
 				state <= Wait2;
 			end
 
@@ -167,7 +164,6 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				//Estado <= Decode;
 				state <= Decode;
 			end
 
@@ -391,7 +387,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= Fetch;
+				state <= Fetch;
 			end
 
 			LoadShiftA: begin
@@ -461,7 +457,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= SaveToReg;
+				state <= SaveToReg;
 			end
 
 			Srl: begin
@@ -494,7 +490,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= SaveToReg;
+				state <= SaveToReg;
 			end
 
 			Sra: begin
@@ -527,7 +523,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= SaveToReg;
+				state <= SaveToReg;
 			end
 
 			SaveToReg: begin
@@ -560,7 +556,7 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= Fetch;
+				state <= Fetch;
 			end
 
 			//~~~Tipo I~~~
@@ -702,5 +698,5 @@ endmodule
 				flagShiftSrc <= 00;
 				flagSSCtrl <= 00;
 				Reset <= 0;
-				Estado <= Fetch;
+				state <= Fetch;
 */
