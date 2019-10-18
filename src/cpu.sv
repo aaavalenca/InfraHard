@@ -36,6 +36,14 @@ logic [31:0] w_shiftRegOut;
 logic [31:0] w_signExtend132Out;
 logic [31:0] w_signExtend1632Out;
 logic [31:0] w_writeDataIn;
+logic [31:0] w_divHighOut;
+logic [31:0] w_divLowOut;
+logic [31:0] w_multHighOut;
+logic [31:0] w_multLowOut;
+logic [31:0] w_highIn;
+logic [31:0] w_lowIn;
+logic [31:0] w_highOut;
+logic [31:0] w_lowOut;
 logic [25:0] w_inst25_0rs;
 logic [4:0] w_inst15_11rd;
 logic [4:0] w_rs;
@@ -55,6 +63,10 @@ logic w_lt;
 logic w_regA;
 logic w_regB;
 logic w_z;
+logic divMult;
+logic regHighW;
+logic regLowW;
+logic multS;
 
 Control controle(
 	.Clock(clock),
@@ -201,6 +213,20 @@ MUX7 muxAluSrcB(
 	.w_muxOut(w_ulaBIn)
 );
 
+MUX8 muxDivMultHigh(
+	.flagDivMult(divMult),
+	.w_muxIn0(w_divHighOut),
+	.w_muxIn1(w_multHighOut),
+	.w_muxOut(w_highIn)
+);
+
+MUX9 muxDivMultLow(
+	.flagDivMult(divMult),
+	.w_muxIn0(w_divLowOut),
+	.w_muxIn1(w_multLowOut),
+	.w_muxOut(w_lowIn)
+);
+
 MUX10 muxPCSrc(
 	.flagPCSrc(pcSrc),
 	.w_muxIn0(w_aluResult),
@@ -211,7 +237,31 @@ MUX10 muxPCSrc(
 	.w_muxOut(w_pcIn)
 );
 
-SignExtend16_32 signEx1632( //Sign Extend que pega o rd. Precisamos de um Sign Extend de 1 pra 32 também
+Registrador high(
+	.Clk(clock),
+	.Reset(reset),
+	.Load(regHighW),
+	.Entrada(w_highIn),
+	.Saida(w_highOut)
+);
+
+Registrador low(
+	.Clk(clock),
+	.Reset(reset),
+	.Load(regLowW),
+	.Entrada(w_lowIn),
+	.Saida(w_lowOut)
+);
+
+MUX11 muxMultS(
+	.flagMultS(multS),
+	.w_muxIn0(w_highOut),
+	.w_muxIn1(w_lowOut),
+	.w_muxOut(w_multS)
+);
+
+
+SignExtend16_32 signEx1632( //Sign Extend que pega o rd. Precisamos de um Sign Extend de 1 pra 32 tambï¿½m
 	.instructionIn15_0(w_rd),
 	.instructionOut31_0(w_signExtend1632Out)
 );
@@ -226,7 +276,7 @@ ShiftLeft26_28 sL2628 ( //Shift Left que pega rs 25_0 e transforma em 27_0
 	.instructionOut27_0(w_shiftLeft2628Out)
 );
 
-assign w_inst25_0rs [25:21] = w_rs; //O rs tem 4 bits, ele passa pelo ShiftLeft 26_28 com 25 bits, então criamos o w_inst25_0rs e colocamos o rs de 4 bits nos bits 25:21, pra que ele possa passar no ShiftLeft
-assign w_inst15_11rd = w_rd[15:11]; //O rd tem 16 bits, mas só os bits 15:11 entram no MUX, então criamos o w_inst15_11rd pra passar pelo MUX
+assign w_inst25_0rs [25:21] = w_rs; //O rs tem 4 bits, ele passa pelo ShiftLeft 26_28 com 25 bits, entï¿½o criamos o w_inst25_0rs e colocamos o rs de 4 bits nos bits 25:21, pra que ele possa passar no ShiftLeft
+assign w_inst15_11rd = w_rd[15:11]; //O rd tem 16 bits, mas sï¿½ os bits 15:11 entram no MUX, entï¿½o criamos o w_inst15_11rd pra passar pelo MUX
 
 endmodule: cpu
