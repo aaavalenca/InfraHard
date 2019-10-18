@@ -1,6 +1,6 @@
 Flow report for InfraHard
-Fri Oct 18 09:54:29 2019
-Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+Fri Oct 18 13:51:56 2019
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
 ---------------------
@@ -35,28 +35,28 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Flow Summary                                                                 ;
-+-------------------------------+----------------------------------------------+
-; Flow Status                   ; Successful - Fri Oct 18 09:54:29 2019        ;
-; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
-; Revision Name                 ; InfraHard                                    ;
-; Top-level Entity Name         ; cpu                                          ;
-; Family                        ; Stratix II                                   ;
-; Met timing requirements       ; No                                           ;
-; Logic utilization             ; < 1 %                                        ;
-;     Combinational ALUTs       ; 12 / 12,480 ( < 1 % )                        ;
-;     Dedicated logic registers ; 5 / 12,480 ( < 1 % )                         ;
-; Total registers               ; 5                                            ;
-; Total pins                    ; 31 / 343 ( 9 % )                             ;
-; Total virtual pins            ; 0                                            ;
-; Total block memory bits       ; 0 / 419,328 ( 0 % )                          ;
-; DSP block 9-bit elements      ; 0 / 96 ( 0 % )                               ;
-; Total PLLs                    ; 0 / 6 ( 0 % )                                ;
-; Total DLLs                    ; 0 / 2 ( 0 % )                                ;
-; Device                        ; EP2S15F484C3                                 ;
-; Timing Models                 ; Final                                        ;
-+-------------------------------+----------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++-------------------------------+-----------------------------------------------+
+; Flow Status                   ; Successful - Fri Oct 18 13:51:55 2019         ;
+; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
+; Revision Name                 ; InfraHard                                     ;
+; Top-level Entity Name         ; cpu                                           ;
+; Family                        ; Stratix II                                    ;
+; Met timing requirements       ; No                                            ;
+; Logic utilization             ; < 1 %                                         ;
+;     Combinational ALUTs       ; 14 / 12,480 ( < 1 % )                         ;
+;     Dedicated logic registers ; 6 / 12,480 ( < 1 % )                          ;
+; Total registers               ; 6                                             ;
+; Total pins                    ; 31 / 343 ( 9 % )                              ;
+; Total virtual pins            ; 0                                             ;
+; Total block memory bits       ; 0 / 419,328 ( 0 % )                           ;
+; DSP block 9-bit elements      ; 0 / 96 ( 0 % )                                ;
+; Total PLLs                    ; 0 / 6 ( 0 % )                                 ;
+; Total DLLs                    ; 0 / 2 ( 0 % )                                 ;
+; Device                        ; EP2S15F484C3                                  ;
+; Timing Models                 ; Final                                         ;
++-------------------------------+-----------------------------------------------+
 
 
 +-----------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/18/2019 09:54:05 ;
+; Start date & time ; 10/18/2019 13:51:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; InfraHard           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 110168738054548.157140324400133 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 229335799398688.157141750411260 ; --            ; --          ; --             ;
 ; PARTITION_COLOR                    ; 16764057                        ; --            ; cpu         ; Top            ;
 ; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; cpu         ; Top            ;
 ; TOP_LEVEL_ENTITY                   ; cpu                             ; InfraHard     ; --          ; --             ;
@@ -88,11 +88,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:07     ; 1.0                     ; 0 MB                ; 00:00:00                           ;
-; Fitter                  ; 00:00:07     ; 1.0                     ; 0 MB                ; 00:00:00                           ;
-; Assembler               ; 00:00:02     ; 1.0                     ; 0 MB                ; 00:00:02                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 0 MB                ; 00:00:00                           ;
-; Total                   ; 00:00:16     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 4493 MB             ; 00:00:02                           ;
+; Fitter                  ; 00:00:04     ; 2.7                     ; 4589 MB             ; 00:00:03                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 4419 MB             ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 4346 MB             ; 00:00:00                           ;
+; Total                   ; 00:00:10     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -101,10 +101,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; Luke             ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                  ; Luke             ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler               ; Luke             ; Windows Vista ; 6.1        ; x86_64         ;
-; Classic Timing Analyzer ; Luke             ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis    ; G3C20            ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; G3C20            ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; G3C20            ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; G3C20            ; Windows Vista ; 6.2        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

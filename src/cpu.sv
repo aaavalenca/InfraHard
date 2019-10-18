@@ -279,10 +279,17 @@ ShiftLeft2 sL2( //Shift Left que pega o resultado do Sign Extend 16_32
 	.instructionOut31_0(w_ShiftLeft2OUt)
 );
 
+
+ShiftLeft16 sL16( //Shift Left que pega o resultado do Sign Extend 16_32
+	.instructionIn15_0(w_rd),
+	.instructionOut31_0(w_shiftLeft16Out)
+);
+
 ShiftLeft26_28 sL2628 ( //Shift Left que pega rs 25_0 e transforma em 27_0
 	.instructionIn25_0(w_inst25_0rs),
 	.instructionOut27_0(w_shiftLeft2628Out)
 );
+
 
 assign w_inst25_0rs [25:21] = w_rs; //O rs tem 4 bits, ele passa pelo ShiftLeft 26_28 com 25 bits, ent�o criamos o w_inst25_0rs e colocamos o rs de 4 bits nos bits 25:21, pra que ele possa passar no ShiftLeft
 assign w_inst15_11rd = w_rd[15:11]; //O rd tem 16 bits, mas s� os bits 15:11 entram no MUX, ent�o criamos o w_inst15_11rd pra passar pelo MUX

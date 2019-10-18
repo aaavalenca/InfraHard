@@ -74,4 +74,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE cpu.sv
 set_global_assignment -name VECTOR_WAVEFORM_FILE InfraHard.vwf
 set_global_assignment -name VERILOG_FILE ShiftLeft2.v
 set_global_assignment -name VERILOG_FILE ShiftLeft26_28.v
+set_global_assignment -name VERILOG_FILE ShiftLeft16.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

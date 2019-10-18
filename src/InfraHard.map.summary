@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Oct 18 09:54:11 2019
-Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+Analysis & Synthesis Status : Successful - Fri Oct 18 13:51:46 2019
+Quartus II 64-Bit Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
 Revision Name : InfraHard
 Top-level Entity Name : cpu
 Family : Stratix II
 Logic utilization : N/A
-    Combinational ALUTs : 12
-    Dedicated logic registers : 5
-Total registers : 5
+    Combinational ALUTs : 14
+    Dedicated logic registers : 6
+Total registers : 6
 Total pins : 31
 Total virtual pins : 0
 Total block memory bits : 0

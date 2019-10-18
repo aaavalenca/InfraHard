@@ -1,6 +1,6 @@
 Analysis & Synthesis report for InfraHard
-Fri Oct 18 09:54:11 2019
-Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+Fri Oct 18 13:51:46 2019
+Quartus II 64-Bit Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
 
 
 ---------------------
@@ -60,25 +60,25 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+-------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status   ; Successful - Fri Oct 18 09:54:11 2019        ;
-; Quartus II Version            ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
-; Revision Name                 ; InfraHard                                    ;
-; Top-level Entity Name         ; cpu                                          ;
-; Family                        ; Stratix II                                   ;
-; Logic utilization             ; N/A                                          ;
-;     Combinational ALUTs       ; 12                                           ;
-;     Dedicated logic registers ; 5                                            ;
-; Total registers               ; 5                                            ;
-; Total pins                    ; 31                                           ;
-; Total virtual pins            ; 0                                            ;
-; Total block memory bits       ; 0                                            ;
-; DSP block 9-bit elements      ; 0                                            ;
-; Total PLLs                    ; 0                                            ;
-; Total DLLs                    ; 0                                            ;
-+-------------------------------+----------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++-------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Fri Oct 18 13:51:46 2019         ;
+; Quartus II 64-Bit Version     ; 9.1 Build 350 03/24/2010 SP 2 SJ Full Version ;
+; Revision Name                 ; InfraHard                                     ;
+; Top-level Entity Name         ; cpu                                           ;
+; Family                        ; Stratix II                                    ;
+; Logic utilization             ; N/A                                           ;
+;     Combinational ALUTs       ; 14                                            ;
+;     Dedicated logic registers ; 6                                             ;
+; Total registers               ; 6                                             ;
+; Total pins                    ; 31                                            ;
+; Total virtual pins            ; 0                                             ;
+; Total block memory bits       ; 0                                             ;
+; DSP block 9-bit elements      ; 0                                             ;
+; Total PLLs                    ; 0                                             ;
+; Total DLLs                    ; 0                                             ;
++-------------------------------+-----------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -161,44 +161,54 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                   ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                     ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------+
-; SignExtend16_32.v                ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/SignExtend16_32.v                                     ;
-; instrucoes.mif                   ; yes             ; User Memory Initialization File  ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/instrucoes.mif                                        ;
-; Banco_reg.vhd                    ; yes             ; User VHDL File                   ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/Banco_reg.vhd                                         ;
-; control.v                        ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/control.v                                             ;
-; Instr_Reg.vhd                    ; yes             ; User VHDL File                   ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/Instr_Reg.vhd                                         ;
-; Memoria.vhd                      ; yes             ; User VHDL File                   ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/Memoria.vhd                                           ;
-; MUX1.v                           ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/MUX1.v                                                ;
-; MUX4.v                           ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/MUX4.v                                                ;
-; MUX5.v                           ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/MUX5.v                                                ;
-; MUX6.v                           ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/MUX6.v                                                ;
-; MUX7.v                           ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/MUX7.v                                                ;
-; MUX10.v                          ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/MUX10.v                                               ;
-; Registrador.vhd                  ; yes             ; User VHDL File                   ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/Registrador.vhd                                       ;
-; ula32.vhd                        ; yes             ; User VHDL File                   ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/ula32.vhd                                             ;
-; cpu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/cpu.sv                                                ;
-; ShiftLeft2.v                     ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/ShiftLeft2.v                                          ;
-; ShiftLeft26_28.v                 ; yes             ; User Verilog HDL File            ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/ShiftLeft26_28.v                                      ;
-; lpm_ram_dq.tdf                   ; yes             ; Megafunction                     ; z:/home/luke/documentos/ufpe/infrahard/alteraquartus91sp2portable/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
-; altram.tdf                       ; yes             ; Megafunction                     ; z:/home/luke/documentos/ufpe/infrahard/alteraquartus91sp2portable/quartus/libraries/megafunctions/altram.tdf     ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; z:/home/luke/documentos/ufpe/infrahard/alteraquartus91sp2portable/quartus/libraries/megafunctions/altsyncram.tdf ;
-; db/altsyncram_g2a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/db/altsyncram_g2a1.tdf                                ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                        ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------------+
+; SignExtend16_32.v                ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/SignExtend16_32.v                               ;
+; instrucoes.mif                   ; yes             ; User Memory Initialization File  ; E:/Users/aaav/Desktop/InfraHard/src/instrucoes.mif                                  ;
+; Banco_reg.vhd                    ; yes             ; User VHDL File                   ; E:/Users/aaav/Desktop/InfraHard/src/Banco_reg.vhd                                   ;
+; control.v                        ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/control.v                                       ;
+; Instr_Reg.vhd                    ; yes             ; User VHDL File                   ; E:/Users/aaav/Desktop/InfraHard/src/Instr_Reg.vhd                                   ;
+; Memoria.vhd                      ; yes             ; User VHDL File                   ; E:/Users/aaav/Desktop/InfraHard/src/Memoria.vhd                                     ;
+; MUX1.v                           ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX1.v                                          ;
+; MUX4.v                           ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX4.v                                          ;
+; MUX5.v                           ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX5.v                                          ;
+; MUX6.v                           ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX6.v                                          ;
+; MUX7.v                           ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX7.v                                          ;
+; MUX8.v                           ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX8.v                                          ;
+; MUX9.v                           ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX9.v                                          ;
+; MUX10.v                          ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX10.v                                         ;
+; MUX11.v                          ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/MUX11.v                                         ;
+; Registrador.vhd                  ; yes             ; User VHDL File                   ; E:/Users/aaav/Desktop/InfraHard/src/Registrador.vhd                                 ;
+; ula32.vhd                        ; yes             ; User VHDL File                   ; E:/Users/aaav/Desktop/InfraHard/src/ula32.vhd                                       ;
+; cpu.sv                           ; yes             ; User SystemVerilog HDL File      ; E:/Users/aaav/Desktop/InfraHard/src/cpu.sv                                          ;
+; ShiftLeft2.v                     ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/ShiftLeft2.v                                    ;
+; ShiftLeft26_28.v                 ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/ShiftLeft26_28.v                                ;
+; ShiftLeft16.v                    ; yes             ; User Verilog HDL File            ; E:/Users/aaav/Desktop/InfraHard/src/ShiftLeft16.v                                   ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                     ; e:/programfiles/quartus/altera/91sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
+; altram.tdf                       ; yes             ; Megafunction                     ; e:/programfiles/quartus/altera/91sp2/quartus/libraries/megafunctions/altram.tdf     ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; e:/programfiles/quartus/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
+; db/altsyncram_g2a1.tdf           ; yes             ; Auto-Generated Megafunction      ; E:/Users/aaav/Desktop/InfraHard/src/db/altsyncram_g2a1.tdf                          ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------+
@@ -206,38 +216,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------------------------+----------------------------+
 ; Resource                                      ; Usage                      ;
 +-----------------------------------------------+----------------------------+
-; Estimated ALUTs Used                          ; 12                         ;
-; Dedicated logic registers                     ; 5                          ;
+; Estimated ALUTs Used                          ; 14                         ;
+; Dedicated logic registers                     ; 6                          ;
 ;                                               ;                            ;
-; Estimated ALUTs Unavailable                   ; 0                          ;
+; Estimated ALUTs Unavailable                   ; 7                          ;
 ;                                               ;                            ;
-; Total combinational functions                 ; 12                         ;
+; Total combinational functions                 ; 14                         ;
 ; Combinational ALUT usage by number of inputs  ;                            ;
 ;     -- 7 input functions                      ; 0                          ;
-;     -- 6 input functions                      ; 0                          ;
-;     -- 5 input functions                      ; 6                          ;
+;     -- 6 input functions                      ; 7                          ;
+;     -- 5 input functions                      ; 0                          ;
 ;     -- 4 input functions                      ; 0                          ;
-;     -- <=3 input functions                    ; 6                          ;
+;     -- <=3 input functions                    ; 7                          ;
 ;                                               ;                            ;
 ; Combinational ALUTs by mode                   ;                            ;
-;     -- normal mode                            ; 12                         ;
+;     -- normal mode                            ; 14                         ;
 ;     -- extended LUT mode                      ; 0                          ;
 ;     -- arithmetic mode                        ; 0                          ;
 ;     -- shared arithmetic mode                 ; 0                          ;
 ;                                               ;                            ;
-; Estimated ALUT/register pairs used            ; 12                         ;
+; Estimated ALUT/register pairs used            ; 21                         ;
 ;                                               ;                            ;
-; Total registers                               ; 5                          ;
-;     -- Dedicated logic registers              ; 5                          ;
+; Total registers                               ; 6                          ;
+;     -- Dedicated logic registers              ; 6                          ;
 ;     -- I/O registers                          ; 0                          ;
 ;                                               ;                            ;
-; Estimated ALMs:  partially or completely used ; 6                          ;
+; Estimated ALMs:  partially or completely used ; 11                         ;
 ;                                               ;                            ;
 ; I/O pins                                      ; 31                         ;
-; Maximum fan-out node                          ; Control:controle|Estado[3] ;
-; Maximum fan-out                               ; 8                          ;
-; Total fan-out                                 ; 63                         ;
-; Average fan-out                               ; 1.31                       ;
+; Maximum fan-out node                          ; Control:controle|Estado[4] ;
+; Maximum fan-out                               ; 9                          ;
+; Total fan-out                                 ; 80                         ;
+; Average fan-out                               ; 1.57                       ;
 +-----------------------------------------------+----------------------------+
 
 
@@ -246,26 +256,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
-; |cpu                       ; 12 (0)            ; 5 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 31   ; 0            ; |cpu                  ; work         ;
-;    |Control:controle|      ; 12 (12)           ; 5 (5)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cpu|Control:controle ;              ;
+; |cpu                       ; 14 (0)            ; 6 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 31   ; 0            ; |cpu                  ; work         ;
+;    |Control:controle|      ; 14 (14)           ; 6 (6)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |cpu|Control:controle ;              ;
 +----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+----------------------------------------------------+-----------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal         ; Free of Timing Hazards ;
-+----------------------------------------------------+-----------------------------+------------------------+
-; Control:controle|state[0]                          ; Control:controle|Selector14 ; yes                    ;
-; Control:controle|state[1]                          ; Control:controle|Selector14 ; yes                    ;
-; Control:controle|state[2]                          ; Control:controle|Selector14 ; yes                    ;
-; Control:controle|state[3]                          ; Control:controle|Selector14 ; yes                    ;
-; Control:controle|state[4]                          ; Control:controle|Selector14 ; yes                    ;
-; Control:controle|state[5]                          ; Control:controle|Selector14 ; yes                    ;
-; Control:controle|state[6]                          ; Control:controle|Selector14 ; yes                    ;
-; Number of user-specified and inferred latches = 7  ;                             ;                        ;
-+----------------------------------------------------+-----------------------------+------------------------+
++---------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                     ;
++----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------+------------------------+
+; Control:controle|state[0]                          ; Control:controle|WideOr41 ; yes                    ;
+; Control:controle|state[1]                          ; Control:controle|WideOr41 ; yes                    ;
+; Control:controle|state[2]                          ; Control:controle|WideOr41 ; yes                    ;
+; Control:controle|state[3]                          ; Control:controle|WideOr41 ; yes                    ;
+; Control:controle|state[4]                          ; Control:controle|WideOr41 ; yes                    ;
+; Control:controle|state[5]                          ; Control:controle|WideOr41 ; yes                    ;
+; Control:controle|state[6]                          ; Control:controle|WideOr41 ; yes                    ;
+; Number of user-specified and inferred latches = 7  ;                           ;                        ;
++----------------------------------------------------+---------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -274,6 +284,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------+---------------------------------------------+
 ; Register name                                  ; Reason for Removal                          ;
 +------------------------------------------------+---------------------------------------------+
+; Registrador:low|Saida[0]                       ; Lost fanout                                 ;
+; Registrador:high|Saida[0]                      ; Stuck at GND due to stuck port clock_enable ;
 ; Registrador:regB|Saida[0]                      ; Stuck at GND due to stuck port clock_enable ;
 ; Registrador:regA|Saida[0]                      ; Stuck at GND due to stuck port clock_enable ;
 ; Instr_Reg:instructionRegister|Instr25_21[0..4] ; Lost fanout                                 ;
@@ -327,9 +339,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Banco_reg:registers|Reg30[0]                   ; Lost fanout                                 ;
 ; Banco_reg:registers|Reg31[0]                   ; Lost fanout                                 ;
 ; Registrador:pc|Saida[0]                        ; Lost fanout                                 ;
-; Control:controle|Estado[6]                     ; Merged with Control:controle|Estado[3]      ;
 ; Control:controle|Estado[5]                     ; Merged with Control:controle|Estado[4]      ;
-; Total Number of Removed Registers = 84         ;                                             ;
+; Total Number of Removed Registers = 85         ;                                             ;
 +------------------------------------------------+---------------------------------------------+
 
 
@@ -343,9 +354,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                            ;                                ; Instr_Reg:instructionRegister|Instr25_21[2],                         ;
 ;                                            ;                                ; Instr_Reg:instructionRegister|Instr25_21[1],                         ;
 ;                                            ;                                ; Instr_Reg:instructionRegister|Instr25_21[0], Registrador:pc|Saida[0] ;
-; Registrador:regB|Saida[0]                  ; Stuck at GND                   ; Registrador:aluOut|Saida[0], Banco_reg:registers|Reg0[0],            ;
-;                                            ; due to stuck port clock_enable ; Banco_reg:registers|Reg1[0], Banco_reg:registers|Reg2[0],            ;
-;                                            ;                                ; Banco_reg:registers|Reg3[0]                                          ;
+; Registrador:regB|Saida[0]                  ; Stuck at GND                   ; Banco_reg:registers|Reg0[0], Banco_reg:registers|Reg1[0],            ;
+;                                            ; due to stuck port clock_enable ; Banco_reg:registers|Reg2[0], Banco_reg:registers|Reg3[0]             ;
+; Registrador:high|Saida[0]                  ; Stuck at GND                   ; Registrador:aluOut|Saida[0]                                          ;
+;                                            ; due to stuck port clock_enable ;                                                                      ;
 ; Instr_Reg:instructionRegister|Instr15_0[7] ; Stuck at GND                   ; Registrador:pc|Saida[1]                                              ;
 ;                                            ; due to stuck port clock_enable ;                                                                      ;
 +--------------------------------------------+--------------------------------+----------------------------------------------------------------------+
@@ -356,7 +368,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 6     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -371,7 +383,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; Control:controle|Estado[0]             ; 7       ;
+; Control:controle|Estado[0]             ; 8       ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -426,8 +438,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Sub            ; 0000101 ; Unsigned Binary                    ;
 ; And            ; 0000110 ; Unsigned Binary                    ;
 ; R_write        ; 0000111 ; Unsigned Binary                    ;
-; Addi           ; 0001000 ; Unsigned Binary                    ;
-; Addiu          ; 0001001 ; Unsigned Binary                    ;
+; Jr             ; 0001000 ; Unsigned Binary                    ;
+; LoadShiftA     ; 0001001 ; Unsigned Binary                    ;
+; Sll            ; 0001010 ; Unsigned Binary                    ;
+; Sra            ; 0001011 ; Unsigned Binary                    ;
+; Srl            ; 0001100 ; Unsigned Binary                    ;
+; SaveToReg      ; 0001101 ; Unsigned Binary                    ;
+; Addi           ; 1001000 ; Unsigned Binary                    ;
+; Addiu          ; 1001001 ; Unsigned Binary                    ;
 ; R_write_addi   ; 1001010 ; Unsigned Binary                    ;
 +----------------+---------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -616,10 +634,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; flagMDR       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; flagDivStart  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; flagMultStart ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; flagDivMult   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; flagRegHighW  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; flagRegLowW   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-; flagMultS     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; flagShiftSrc  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; flagShiftAmt  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 ; flagShiftCtrl ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
@@ -632,15 +648,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II Analysis & Synthesis
-    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Oct 18 09:54:04 2019
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Oct 18 13:51:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off InfraHard -c InfraHard
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file signextend16_32.v
     Info: Found entity 1: SignExtend16_32
 Info: Found 2 design units, including 1 entities, in source file banco_reg.vhd
     Info: Found design unit 1: Banco_reg-behavioral_arch
     Info: Found entity 1: Banco_reg
+Warning (10229): Verilog HDL Expression warning at control.v(22): truncated literal to match 7 bits
 Info: Found 1 design units, including 1 entities, in source file control.v
     Info: Found entity 1: Control
 Info: Found 2 design units, including 1 entities, in source file instr_reg.vhd
@@ -689,111 +707,118 @@ Info: Found 1 design units, including 1 entities, in source file shiftleft2.v
     Info: Found entity 1: ShiftLeft2
 Info: Found 1 design units, including 1 entities, in source file shiftleft26_28.v
     Info: Found entity 1: ShiftLeft26_28
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(95): created implicit net for "w_regAOut"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(148): created implicit net for "w_ulaAIn"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(149): created implicit net for "w_ulaBIn"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(181): created implicit net for "w_signExtend132eOut"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(208): created implicit net for "w_shiftleft2pc"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(209): created implicit net for "w_signExtend132dOut"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(210): created implicit net for "w_epcOut"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(221): created implicit net for "w_ShiftLeft2OUt"
+Info: Found 1 design units, including 1 entities, in source file shiftleft16.v
+    Info: Found entity 1: ShiftLeft16
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(115): created implicit net for "w_regAOut"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(168): created implicit net for "w_ulaAIn"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(169): created implicit net for "w_ulaBIn"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(201): created implicit net for "w_signExtend132eOut"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(242): created implicit net for "w_shiftleft2pc"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(243): created implicit net for "w_signExtend132dOut"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(244): created implicit net for "w_epcOut"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(279): created implicit net for "w_ShiftLeft2OUt"
 Info: Elaborating entity "cpu" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at cpu.sv(40): object "w_inst15_11rd" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at cpu.sv(48): object "w_inst15_11rd" assigned a value but never read
 Info: Elaborating entity "Control" for hierarchy "Control:controle"
-Warning (10230): Verilog HDL assignment warning at control.v(49): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at control.v(56): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at control.v(176): truncated value with size 32 to match size of target (3)
-Warning (10270): Verilog HDL Case Statement warning at control.v(208): incomplete case statement has no default case item
-Warning (10270): Verilog HDL Case Statement warning at control.v(205): incomplete case statement has no default case item
-Warning (10230): Verilog HDL assignment warning at control.v(258): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at control.v(291): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at control.v(361): truncated value with size 32 to match size of target (3)
-Warning (10270): Verilog HDL Case Statement warning at control.v(33): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagALUOut", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagALUCtrl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagALUSrcA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagALUSrcB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagDivMult", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagDivStart", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagEPC", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagExcpCtrl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagIorD", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagIrWrite", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagLSCtrl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagMDR", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagMemCtrl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagMemReg", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagMultS", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagMultStart", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagPCSrc", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagPcWrite", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagRegA", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagRegB", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagRegDist", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagRegHighW", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagRegLowW", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagRegWrite", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagShiftAmt", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagShiftCtrl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagShiftSrc", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "flagSSCtrl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "Reset", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at control.v(33): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "state[0]" at control.v(33)
-Info (10041): Inferred latch for "state[1]" at control.v(33)
-Info (10041): Inferred latch for "state[2]" at control.v(33)
-Info (10041): Inferred latch for "state[3]" at control.v(33)
-Info (10041): Inferred latch for "state[4]" at control.v(33)
-Info (10041): Inferred latch for "state[5]" at control.v(33)
-Info (10041): Inferred latch for "state[6]" at control.v(33)
-Info (10041): Inferred latch for "Reset" at control.v(33)
-Info (10041): Inferred latch for "flagSSCtrl[0]" at control.v(33)
-Info (10041): Inferred latch for "flagSSCtrl[1]" at control.v(33)
-Info (10041): Inferred latch for "flagShiftSrc[0]" at control.v(33)
-Info (10041): Inferred latch for "flagShiftSrc[1]" at control.v(33)
-Info (10041): Inferred latch for "flagShiftCtrl[0]" at control.v(33)
-Info (10041): Inferred latch for "flagShiftCtrl[1]" at control.v(33)
-Info (10041): Inferred latch for "flagShiftCtrl[2]" at control.v(33)
-Info (10041): Inferred latch for "flagShiftAmt[0]" at control.v(33)
-Info (10041): Inferred latch for "flagShiftAmt[1]" at control.v(33)
-Info (10041): Inferred latch for "flagRegWrite" at control.v(33)
-Info (10041): Inferred latch for "flagRegLowW" at control.v(33)
-Info (10041): Inferred latch for "flagRegHighW" at control.v(33)
-Info (10041): Inferred latch for "flagRegDist[0]" at control.v(33)
-Info (10041): Inferred latch for "flagRegDist[1]" at control.v(33)
-Info (10041): Inferred latch for "flagRegDist[2]" at control.v(33)
-Info (10041): Inferred latch for "flagRegB" at control.v(33)
-Info (10041): Inferred latch for "flagRegA" at control.v(33)
-Info (10041): Inferred latch for "flagPcWrite" at control.v(33)
-Info (10041): Inferred latch for "flagPCSrc[0]" at control.v(33)
-Info (10041): Inferred latch for "flagPCSrc[1]" at control.v(33)
-Info (10041): Inferred latch for "flagPCSrc[2]" at control.v(33)
-Info (10041): Inferred latch for "flagMultStart" at control.v(33)
-Info (10041): Inferred latch for "flagMultS" at control.v(33)
-Info (10041): Inferred latch for "flagMemReg[0]" at control.v(33)
-Info (10041): Inferred latch for "flagMemReg[1]" at control.v(33)
-Info (10041): Inferred latch for "flagMemReg[2]" at control.v(33)
-Info (10041): Inferred latch for "flagMemCtrl" at control.v(33)
-Info (10041): Inferred latch for "flagMDR" at control.v(33)
-Info (10041): Inferred latch for "flagLSCtrl[0]" at control.v(33)
-Info (10041): Inferred latch for "flagLSCtrl[1]" at control.v(33)
-Info (10041): Inferred latch for "flagIrWrite" at control.v(33)
-Info (10041): Inferred latch for "flagIorD[0]" at control.v(33)
-Info (10041): Inferred latch for "flagIorD[1]" at control.v(33)
-Info (10041): Inferred latch for "flagExcpCtrl[0]" at control.v(33)
-Info (10041): Inferred latch for "flagExcpCtrl[1]" at control.v(33)
-Info (10041): Inferred latch for "flagEPC" at control.v(33)
-Info (10041): Inferred latch for "flagDivStart" at control.v(33)
-Info (10041): Inferred latch for "flagDivMult" at control.v(33)
-Info (10041): Inferred latch for "flagALUSrcB[0]" at control.v(33)
-Info (10041): Inferred latch for "flagALUSrcB[1]" at control.v(33)
-Info (10041): Inferred latch for "flagALUSrcB[2]" at control.v(33)
-Info (10041): Inferred latch for "flagALUSrcA[0]" at control.v(33)
-Info (10041): Inferred latch for "flagALUSrcA[1]" at control.v(33)
-Info (10041): Inferred latch for "flagALUCtrl[0]" at control.v(33)
-Info (10041): Inferred latch for "flagALUCtrl[1]" at control.v(33)
-Info (10041): Inferred latch for "flagALUCtrl[2]" at control.v(33)
-Info (10041): Inferred latch for "flagALUOut" at control.v(33)
+Warning (10230): Verilog HDL assignment warning at control.v(52): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(59): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(175): truncated value with size 32 to match size of target (3)
+Warning (10270): Verilog HDL Case Statement warning at control.v(207): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at control.v(204): incomplete case statement has no default case item
+Warning (10230): Verilog HDL assignment warning at control.v(263): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(296): truncated value with size 32 to match size of target (3)
+Warning (10270): Verilog HDL Case Statement warning at control.v(423): incomplete case statement has no default case item
+Warning (10230): Verilog HDL assignment warning at control.v(456): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(489): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(522): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(543): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at control.v(568): truncated value with size 32 to match size of target (3)
+Warning (10270): Verilog HDL Case Statement warning at control.v(36): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagALUOut", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagALUCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagALUSrcA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagALUSrcB", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagDivMult", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagDivStart", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagEPC", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagExcpCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagIorD", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagIrWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagLSCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagMDR", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagMemCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagMemReg", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagMultS", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagMultStart", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagPCSrc", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagPcWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagRegA", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagRegB", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagRegDist", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagRegHighW", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagRegLowW", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagRegWrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagShiftAmt", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagShiftCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagShiftSrc", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "flagSSCtrl", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "Reset", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(36): inferring latch(es) for variable "state", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "state[0]" at control.v(36)
+Info (10041): Inferred latch for "state[1]" at control.v(36)
+Info (10041): Inferred latch for "state[2]" at control.v(36)
+Info (10041): Inferred latch for "state[3]" at control.v(36)
+Info (10041): Inferred latch for "state[4]" at control.v(36)
+Info (10041): Inferred latch for "state[5]" at control.v(36)
+Info (10041): Inferred latch for "state[6]" at control.v(36)
+Info (10041): Inferred latch for "Reset" at control.v(36)
+Info (10041): Inferred latch for "flagSSCtrl[0]" at control.v(36)
+Info (10041): Inferred latch for "flagSSCtrl[1]" at control.v(36)
+Info (10041): Inferred latch for "flagShiftSrc[0]" at control.v(36)
+Info (10041): Inferred latch for "flagShiftSrc[1]" at control.v(36)
+Info (10041): Inferred latch for "flagShiftCtrl[0]" at control.v(36)
+Info (10041): Inferred latch for "flagShiftCtrl[1]" at control.v(36)
+Info (10041): Inferred latch for "flagShiftCtrl[2]" at control.v(36)
+Info (10041): Inferred latch for "flagShiftAmt[0]" at control.v(36)
+Info (10041): Inferred latch for "flagShiftAmt[1]" at control.v(36)
+Info (10041): Inferred latch for "flagRegWrite" at control.v(36)
+Info (10041): Inferred latch for "flagRegLowW" at control.v(36)
+Info (10041): Inferred latch for "flagRegHighW" at control.v(36)
+Info (10041): Inferred latch for "flagRegDist[0]" at control.v(36)
+Info (10041): Inferred latch for "flagRegDist[1]" at control.v(36)
+Info (10041): Inferred latch for "flagRegDist[2]" at control.v(36)
+Info (10041): Inferred latch for "flagRegB" at control.v(36)
+Info (10041): Inferred latch for "flagRegA" at control.v(36)
+Info (10041): Inferred latch for "flagPcWrite" at control.v(36)
+Info (10041): Inferred latch for "flagPCSrc[0]" at control.v(36)
+Info (10041): Inferred latch for "flagPCSrc[1]" at control.v(36)
+Info (10041): Inferred latch for "flagPCSrc[2]" at control.v(36)
+Info (10041): Inferred latch for "flagMultStart" at control.v(36)
+Info (10041): Inferred latch for "flagMultS" at control.v(36)
+Info (10041): Inferred latch for "flagMemReg[0]" at control.v(36)
+Info (10041): Inferred latch for "flagMemReg[1]" at control.v(36)
+Info (10041): Inferred latch for "flagMemReg[2]" at control.v(36)
+Info (10041): Inferred latch for "flagMemCtrl" at control.v(36)
+Info (10041): Inferred latch for "flagMDR" at control.v(36)
+Info (10041): Inferred latch for "flagLSCtrl[0]" at control.v(36)
+Info (10041): Inferred latch for "flagLSCtrl[1]" at control.v(36)
+Info (10041): Inferred latch for "flagIrWrite" at control.v(36)
+Info (10041): Inferred latch for "flagIorD[0]" at control.v(36)
+Info (10041): Inferred latch for "flagIorD[1]" at control.v(36)
+Info (10041): Inferred latch for "flagExcpCtrl[0]" at control.v(36)
+Info (10041): Inferred latch for "flagExcpCtrl[1]" at control.v(36)
+Info (10041): Inferred latch for "flagEPC" at control.v(36)
+Info (10041): Inferred latch for "flagDivStart" at control.v(36)
+Info (10041): Inferred latch for "flagDivMult" at control.v(36)
+Info (10041): Inferred latch for "flagALUSrcB[0]" at control.v(36)
+Info (10041): Inferred latch for "flagALUSrcB[1]" at control.v(36)
+Info (10041): Inferred latch for "flagALUSrcB[2]" at control.v(36)
+Info (10041): Inferred latch for "flagALUSrcA[0]" at control.v(36)
+Info (10041): Inferred latch for "flagALUSrcA[1]" at control.v(36)
+Info (10041): Inferred latch for "flagALUCtrl[0]" at control.v(36)
+Info (10041): Inferred latch for "flagALUCtrl[1]" at control.v(36)
+Info (10041): Inferred latch for "flagALUCtrl[2]" at control.v(36)
+Info (10041): Inferred latch for "flagALUOut" at control.v(36)
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:pc"
 Info: Elaborating entity "MUX1" for hierarchy "MUX1:muxIorD"
 Info: Elaborating entity "Memoria" for hierarchy "Memoria:memory"
@@ -901,6 +926,8 @@ Info (10041): Inferred latch for "w_muxOut[28]" at MUX7.v(10)
 Info (10041): Inferred latch for "w_muxOut[29]" at MUX7.v(10)
 Info (10041): Inferred latch for "w_muxOut[30]" at MUX7.v(10)
 Info (10041): Inferred latch for "w_muxOut[31]" at MUX7.v(10)
+Info: Elaborating entity "MUX8" for hierarchy "MUX8:muxDivMultHigh"
+Info: Elaborating entity "MUX9" for hierarchy "MUX9:muxDivMultLow"
 Info: Elaborating entity "MUX10" for hierarchy "MUX10:muxPCSrc"
 Warning (10270): Verilog HDL Case Statement warning at MUX10.v(10): incomplete case statement has no default case item
 Warning (10240): Verilog HDL Always Construct warning at MUX10.v(10): inferring latch(es) for variable "w_muxOut", which holds its previous value in one or more paths through the always construct
@@ -936,8 +963,10 @@ Info (10041): Inferred latch for "w_muxOut[28]" at MUX10.v(10)
 Info (10041): Inferred latch for "w_muxOut[29]" at MUX10.v(10)
 Info (10041): Inferred latch for "w_muxOut[30]" at MUX10.v(10)
 Info (10041): Inferred latch for "w_muxOut[31]" at MUX10.v(10)
+Info: Elaborating entity "MUX11" for hierarchy "MUX11:muxMultS"
 Info: Elaborating entity "SignExtend16_32" for hierarchy "SignExtend16_32:signEx1632"
 Info: Elaborating entity "ShiftLeft2" for hierarchy "ShiftLeft2:sL2"
+Info: Elaborating entity "ShiftLeft16" for hierarchy "ShiftLeft16:sL16"
 Info: Elaborating entity "ShiftLeft26_28" for hierarchy "ShiftLeft26_28:sL2628"
 Warning: LATCH primitive "MUX10:muxPCSrc|w_muxOut[0]" is permanently enabled
 Warning: Synthesized away the following node(s):
@@ -976,7 +1005,6 @@ Warning: Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Memoria:memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_g2a1:auto_generated|q_a[7]"
 Warning: 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info: Duplicate LATCH primitives merged into single LATCH primitive
-    Info: Duplicate LATCH primitive "Control:controle|state[6]" merged with LATCH primitive "Control:controle|state[3]"
     Info: Duplicate LATCH primitive "Control:controle|state[5]" merged with LATCH primitive "Control:controle|state[4]"
 Warning: Latch Control:controle|state[0] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Control:controle|Estado[4]
@@ -988,6 +1016,8 @@ Warning: Latch Control:controle|state[3] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Control:controle|Estado[4]
 Warning: Latch Control:controle|state[4] has unsafe behavior
     Warning: Ports D and ENA on the latch are fed by the same signal Control:controle|Estado[0]
+Warning: Latch Control:controle|state[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal Control:controle|Estado[2]
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "w_opcode[0]" is stuck at GND
     Warning (13410): Pin "w_opcode[1]" is stuck at GND
@@ -1011,7 +1041,8 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "w_rd[13]" is stuck at GND
     Warning (13410): Pin "w_rd[14]" is stuck at GND
     Warning (13410): Pin "w_rd[15]" is stuck at GND
-Info: 53 registers lost all their fanouts during netlist optimizations. The first 53 are displayed below.
+Info: 54 registers lost all their fanouts during netlist optimizations. The first 54 are displayed below.
+    Info: Register "Registrador:low|Saida[0]" lost all its fanouts during netlist optimizations.
     Info: Register "Instr_Reg:instructionRegister|Instr25_21[4]" lost all its fanouts during netlist optimizations.
     Info: Register "Instr_Reg:instructionRegister|Instr25_21[3]" lost all its fanouts during netlist optimizations.
     Info: Register "Instr_Reg:instructionRegister|Instr25_21[2]" lost all its fanouts during netlist optimizations.
@@ -1065,23 +1096,23 @@ Info: 53 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "Banco_reg:registers|Reg30[0]" lost all its fanouts during netlist optimizations.
     Info: Register "Banco_reg:registers|Reg31[0]" lost all its fanouts during netlist optimizations.
     Info: Register "Registrador:pc|Saida[0]" lost all its fanouts during netlist optimizations.
-Info: Generated suppressed messages file C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/InfraHard.map.smsg
+Info: Generated suppressed messages file E:/Users/aaav/Desktop/InfraHard/src/InfraHard.map.smsg
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset"
-Info: Implemented 47 device resources after synthesis - the final resource count might be different
+Info: Implemented 50 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
     Info: Implemented 29 output pins
-    Info: Implemented 16 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 128 warnings
-    Info: Peak virtual memory: 0 megabytes
-    Info: Processing ended: Fri Oct 18 09:54:11 2019
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Implemented 19 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 136 warnings
+    Info: Peak virtual memory: 4493 megabytes
+    Info: Processing ended: Fri Oct 18 13:51:46 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/users/luke/Meus Documentos/UFPE/InfraHard/InfraHard/src/InfraHard.map.smsg.
+The suppressed messages can be found in E:/Users/aaav/Desktop/InfraHard/src/InfraHard.map.smsg.
 
 
