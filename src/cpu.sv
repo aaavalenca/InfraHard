@@ -89,7 +89,9 @@ Control controle(
 	.flagMemReg(memToReg),
 	.flagALUSrcA(aluSrcA),
 	.flagALUSrcB(aluSrcB),
-	.flagPCSrc(pcSrc)
+	.flagPCSrc(pcSrc),
+	.flagDivMult(divMult),
+	.flagMultS(multS)
 );
 
 Registrador pc(
