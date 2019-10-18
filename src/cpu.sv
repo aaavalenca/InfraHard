@@ -76,22 +76,28 @@ Control controle(
 	.OPCode(w_opcode),
 	.Funct(w_rd[5:0]),
 	.Estado(state),
-	.flagPcWrite(pcWrite),
+
+	// sinais dos muxes
 	.flagIorD(iorD),
-	.flagMemCtrl(memCtrl),
-	.flagIrWrite(irWrite),
-	.flagRegWrite(regWrite),
-	.flagRegA(w_regA),
-	.flagRegB(w_regB),
-	.flagALUCtrl(aluCtrl),
-	.flagALUOut(aluOutCtrl),
 	.flagRegDist(regDist),
 	.flagMemReg(memToReg),
 	.flagALUSrcA(aluSrcA),
 	.flagALUSrcB(aluSrcB),
 	.flagPCSrc(pcSrc),
+	.flagMultS(multS),
 	.flagDivMult(divMult),
-	.flagMultS(multS)
+
+	// sinais de registradores
+	.flagPcWrite(pcWrite),
+	.flagRegA(w_regA),
+	.flagRegB(w_regB),
+	.flagALUCtrl(aluCtrl),
+	.flagALUOut(aluOutCtrl),
+
+	// sinais dos componentes	
+	.flagRegWrite(regWrite),
+	.flagIrWrite(irWrite),
+	.flagMemCtrl(memCtrl)
 );
 
 Registrador pc(
