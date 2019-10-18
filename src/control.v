@@ -16,11 +16,14 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 	parameter Resetar = 7'b0000000, Fetch = 7'b0000001, Wait = 7'b0000010, Decode = 7'b0000011, Wait2 = 7'b1111111;
 
 	//~~~Estados das Funcoes~~~
-	//~~~Tipo R
-	parameter Add = 7'b0000100, Sub = 7'b0000101, And = 7'b0000110, R_write = 7'b0000111;
-	//~~~Tipo I
-	parameter Addi = 7'b0001000, Addiu = 7'b0001001, R_write_addi = 7'b1001010;
-	
+		//~~~Tipo R
+			parameter Add = 7'b0000100, Sub = 7'b0000101, And = 7'b0000110, R_write = 7'b0000111;
+			parameter Jr = 7'b0001000;
+			parameter LoadShiftA = 7'b0001001, Sll = 7'b0001010, Sra = 7'bb0001011, Srl = 7'b0001100, SaveToReg = 7'b0001101;
+		//~~~Tipo I
+		parameter Addi = 7'b1001000, Addiu = 7'b1001001, R_write_addi = 7'b1001010;
+	//
+
 	reg [6:0] state;
 	
 	//Maquina de Estados
@@ -203,13 +206,19 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				//Indentificar a Instrucao
 				
 				case (OPCode)
-					6'b000000:
+					6'b000000: begin
 					
 						case (Funct)
+							6'b000000: state <= LoadShiftA; //Funct: 0x0 -> Sll
+							6'b000010: state <= LoadShiftA; //Funct: 0x2 -> Srl
+							6'b000011: state <= LoadShiftA; //Funct: 0x3 -> Sra
+							6'b001000: state <= Jr;  //Funct: 0x08 -> Jr
 							6'b100000: state <= Add; //Funct: 0x20 -> Add
 							6'b100010: state <= Sub; //Funct: 0x22 -> Sub
 							6'b100100: state <= And; //Funct: 0x24 -> And
 						endcase
+
+					end
 
 					6'b001000: state <= Addi;
 					6'b001001: state <= Addiu;
@@ -350,6 +359,208 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				flagSSCtrl <= 00;
 				Reset <= 0;
 				state <= Fetch;
+			end
+
+			Jr: begin
+				flagALUOut <= 0;
+				flagALUCtrl <= 000;
+				flagALUSrcA <= 01;
+				flagALUSrcB <= 000;
+				flagDivMult <= 0;
+				flagDivStart <= 0;
+				flagEPC <= 0;
+				flagExcpCtrl <= 00;
+				flagIorD <= 00;
+				flagIrWrite <= 0;
+				flagLSCtrl <= 00;
+				flagMDR <= 0;
+				flagMemCtrl <= 0;
+				flagMemReg <= 000;
+				flagMultS <= 0;
+				flagMultStart <= 0;
+				flagPCSrc <= 00;
+				flagPcWrite <= 1;
+				flagRegA <= 0;
+				flagRegB <= 0;
+				flagRegDist <= 000;
+				flagRegHighW <= 0;
+				flagRegLowW <= 0;
+				flagRegWrite <= 0;
+				flagShiftAmt <= 00;
+				flagShiftCtrl <= 000;
+				flagShiftSrc <= 00;
+				flagSSCtrl <= 00;
+				Reset <= 0;
+				Estado <= Fetch;
+			end
+
+			LoadShiftA: begin
+				flagALUOut <= 0;
+				flagALUCtrl <= 000;
+				flagALUSrcA <= 00;
+				flagALUSrcB <= 000;
+				flagDivMult <= 0;
+				flagDivStart <= 0;
+				flagEPC <= 0;
+				flagExcpCtrl <= 00;
+				flagIorD <= 00;
+				flagIrWrite <= 0;
+				flagLSCtrl <= 00;
+				flagMDR <= 0;
+				flagMemCtrl <= 0;
+				flagMemReg <= 000;
+				flagMultS <= 0;
+				flagMultStart <= 0;
+				flagPCSrc <= 00;
+				flagPcWrite <= 0;
+				flagRegA <= 0;
+				flagRegB <= 0;
+				flagRegDist <= 000;
+				flagRegHighW <= 0;
+				flagRegLowW <= 0;
+				flagRegWrite <= 0;
+				flagShiftAmt <= 00;
+				flagShiftCtrl <= 001;
+				flagShiftSrc <= 00;
+				flagSSCtrl <= 00;
+				Reset <= 0;
+				case(Funct)
+					6'b000000: state <= Sll; //Funct: 0x0 -> Sll
+					6'b000010: state <= Srl; //Funct: 0x2 -> Srl
+					6'b000011: state <= Sra; //Funct: 0x3 -> Sra
+				endcase
+			end
+
+			Sll: begin
+				flagALUOut <= 0;
+				flagALUCtrl <= 000;
+				flagALUSrcA <= 00;
+				flagALUSrcB <= 000;
+				flagDivMult <= 0;
+				flagDivStart <= 0;
+				flagEPC <= 0;
+				flagExcpCtrl <= 00;
+				flagIorD <= 00;
+				flagIrWrite <= 0;
+				flagLSCtrl <= 00;
+				flagMDR <= 0;
+				flagMemCtrl <= 0;
+				flagMemReg <= 000;
+				flagMultS <= 0;
+				flagMultStart <= 0;
+				flagPCSrc <= 00;
+				flagPcWrite <= 0;
+				flagRegA <= 0;
+				flagRegB <= 0;
+				flagRegDist <= 000;
+				flagRegHighW <= 0;
+				flagRegLowW <= 0;
+				flagRegWrite <= 0;
+				flagShiftAmt <= 00;
+				flagShiftCtrl <= 010;
+				flagShiftSrc <= 00;
+				flagSSCtrl <= 00;
+				Reset <= 0;
+				Estado <= SaveToReg;
+			end
+
+			Srl: begin
+				flagALUOut <= 0;
+				flagALUCtrl <= 000;
+				flagALUSrcA <= 00;
+				flagALUSrcB <= 000;
+				flagDivMult <= 0;
+				flagDivStart <= 0;
+				flagEPC <= 0;
+				flagExcpCtrl <= 00;
+				flagIorD <= 00;
+				flagIrWrite <= 0;
+				flagLSCtrl <= 00;
+				flagMDR <= 0;
+				flagMemCtrl <= 0;
+				flagMemReg <= 000;
+				flagMultS <= 0;
+				flagMultStart <= 0;
+				flagPCSrc <= 00;
+				flagPcWrite <= 0;
+				flagRegA <= 0;
+				flagRegB <= 0;
+				flagRegDist <= 000;
+				flagRegHighW <= 0;
+				flagRegLowW <= 0;
+				flagRegWrite <= 0;
+				flagShiftAmt <= 00;
+				flagShiftCtrl <= 011;
+				flagShiftSrc <= 00;
+				flagSSCtrl <= 00;
+				Reset <= 0;
+				Estado <= SaveToReg;
+			end
+
+			Sra: begin
+				flagALUOut <= 0;
+				flagALUCtrl <= 000;
+				flagALUSrcA <= 00;
+				flagALUSrcB <= 000;
+				flagDivMult <= 0;
+				flagDivStart <= 0;
+				flagEPC <= 0;
+				flagExcpCtrl <= 00;
+				flagIorD <= 00;
+				flagIrWrite <= 0;
+				flagLSCtrl <= 00;
+				flagMDR <= 0;
+				flagMemCtrl <= 0;
+				flagMemReg <= 000;
+				flagMultS <= 0;
+				flagMultStart <= 0;
+				flagPCSrc <= 00;
+				flagPcWrite <= 0;
+				flagRegA <= 0;
+				flagRegB <= 0;
+				flagRegDist <= 000;
+				flagRegHighW <= 0;
+				flagRegLowW <= 0;
+				flagRegWrite <= 0;
+				flagShiftAmt <= 00;
+				flagShiftCtrl <= 100;
+				flagShiftSrc <= 00;
+				flagSSCtrl <= 00;
+				Reset <= 0;
+				Estado <= SaveToReg;
+			end
+
+			SaveToReg: begin
+				flagALUOut <= 0;
+				flagALUCtrl <= 000;
+				flagALUSrcA <= 00;
+				flagALUSrcB <= 000;
+				flagDivMult <= 0;
+				flagDivStart <= 0;
+				flagEPC <= 0;
+				flagExcpCtrl <= 00;
+				flagIorD <= 00;
+				flagIrWrite <= 0;
+				flagLSCtrl <= 00;
+				flagMDR <= 0;
+				flagMemCtrl <= 0;
+				flagMemReg <= 101;
+				flagMultS <= 0;
+				flagMultStart <= 0;
+				flagPCSrc <= 00;
+				flagPcWrite <= 0;
+				flagRegA <= 0;
+				flagRegB <= 0;
+				flagRegDist <= 001;
+				flagRegHighW <= 0;
+				flagRegLowW <= 0;
+				flagRegWrite <= 1;
+				flagShiftAmt <= 00;
+				flagShiftCtrl <= 000;
+				flagShiftSrc <= 00;
+				flagSSCtrl <= 00;
+				Reset <= 0;
+				Estado <= Fetch;
 			end
 
 			//~~~Tipo I~~~
