@@ -31,10 +31,13 @@ logic [31:0] w_pcIn;
 logic [31:0] w_pcOut;
 logic [31:0] w_shiftLeft16Out;
 logic [31:0] w_shiftLeft2Out;
+logic [31:0] w_shiftLeft2628Out;
 logic [31:0] w_shiftRegOut;
 logic [31:0] w_signExtend132Out;
 logic [31:0] w_signExtend1632Out;
 logic [31:0] w_writeDataIn;
+logic [25:0] w_inst25_0rs;
+logic [4:0] w_inst15_11rd;
 logic [4:0] w_rs;
 logic [4:0] w_rt;
 logic [4:0] w_writeRegIn;
@@ -165,7 +168,7 @@ Registrador aluOut(
 MUX4 muxRegDist(
 	.flagRegDist(regDist),
 	.w_muxIn0(w_rt),
-	.w_muxIn1(w_rd[15:11]),
+	.w_muxIn1(w_rd[15:11]), //nao sabia q podia passar assim, ai criei o assign, mas nao vou mudar
 	.w_muxIn3(w_rs),
 	.w_muxOut(w_writeRegIn)
 );
@@ -208,9 +211,22 @@ MUX10 muxPCSrc(
 	.w_muxOut(w_pcIn)
 );
 
-SignExtend signExtend(
-	.instruction15_0(w_rd),
-	.instruction31_0(w_signExtend1632Out)
+SignExtend16_32 signEx1632( //Sign Extend que pega o rd. Precisamos de um Sign Extend de 1 pra 32 também
+	.instructionIn15_0(w_rd),
+	.instructionOut31_0(w_signExtend1632Out)
 );
+
+ShiftLeft2 sL2( //Shift Left que pega o resultado do Sign Extend 16_32
+	.instructionIn31_0(w_signExtend1632Out),
+	.instructionOut31_0(w_ShiftLeft2OUt)
+);
+
+ShiftLeft26_28 sL2628 ( //Shift Left que pega rs 25_0 e transforma em 27_0
+	.instructionIn25_0(w_inst25_0rs),
+	.instructionOut27_0(w_shiftLeft2628Out)
+);
+
+assign w_inst25_0rs [25:21] = w_rs; //O rs tem 4 bits, ele passa pelo ShiftLeft 26_28 com 25 bits, então criamos o w_inst25_0rs e colocamos o rs de 4 bits nos bits 25:21, pra que ele possa passar no ShiftLeft
+assign w_inst15_11rd = w_rd[15:11]; //O rd tem 16 bits, mas só os bits 15:11 entram no MUX, então criamos o w_inst15_11rd pra passar pelo MUX
 
 endmodule: cpu

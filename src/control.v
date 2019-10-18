@@ -203,19 +203,13 @@ module Control(Estado, Clock, GT, EQ, LT, OPCode, Funct, flagPcWrite, flagIorD, 
 				//Indentificar a Instrucao
 				
 				case (OPCode)
-
 					6'b000000:
-					begin //OPCode: 0x0 -> Tipo R
-
+					
 						case (Funct)
-							
 							6'b100000: state <= Add; //Funct: 0x20 -> Add
 							6'b100010: state <= Sub; //Funct: 0x22 -> Sub
 							6'b100100: state <= And; //Funct: 0x24 -> And
-
 						endcase
-
-					end
 
 					6'b001000: state <= Addi;
 					6'b001001: state <= Addiu;
