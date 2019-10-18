@@ -91,10 +91,10 @@ Control controle(
 	.flagPcWrite(pcWrite),
 	.flagRegA(w_regA),
 	.flagRegB(w_regB),
-	.flagALUCtrl(aluCtrl),
 	.flagALUOut(aluOutCtrl),
 
 	// sinais dos componentes	
+	.flagALUCtrl(aluCtrl),
 	.flagRegWrite(regWrite),
 	.flagIrWrite(irWrite),
 	.flagMemCtrl(memCtrl)
